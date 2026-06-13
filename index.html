@@ -40,10 +40,18 @@ a{color:#60a5fa;text-decoration:none}a:hover{text-decoration:underline}
 .news-link{font-size:11px;color:#94a3b8}.news-tks{margin-top:4px}
 .tk{display:inline-block;background:#334155;color:#cbd5e1;padding:1px 7px;border-radius:10px;font-size:10px;margin:2px 3px 0 0}
 .sect{margin:20px 0 10px;font-size:15px;font-weight:700;border-left:4px solid #2563eb;padding-left:8px}
+.evlist{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ev{display:flex;gap:10px;background:#1e293b;border:1px solid #334155;border-radius:8px;padding:10px}
+.ev-date{flex:0 0 92px;font-weight:700;color:#fbbf24;font-size:12px;line-height:1.3}
+.ev-body{flex:1;min-width:0}
+.ev-h{display:flex;gap:6px;align-items:center;flex-wrap:wrap;margin-bottom:3px}
+.ev-cat{font-size:10px;font-weight:700;padding:1px 7px;border-radius:10px}
+.ev-imp{font-size:11px}
+@media(max-width:900px){.evlist{grid-template-columns:1fr}}
 .foot{color:#475569;font-size:11px;margin-top:20px;line-height:1.6}
 </style></head><body><div class="wrap">
 <h1>中国AI 50 · 交易决策看板 <span class="live">● 当日实时</span></h1>
-<div class="sub">数据日期 2026-06-13 · 生成于 2026-06-13 23:14 · 共 50 只 · 信号灯=资金30%/估值(扣非)25%/技术25%/情绪20%</div>
+<div class="sub">数据日期 2026-06-13 · 生成于 2026-06-13 23:50 · 共 50 只 · 信号灯=资金30%/估值(扣非)25%/技术25%/情绪20%</div>
 
 <div class="panels">
   <div class="card"><h3>💰 资金流向榜（主力5日净额·DDE）</h3><div class="fcols"><div class="fcol"><div class="fhead fin">净流入 TOP</div><div class="frow"><span>海光信息</span><span class="fin">+28.14亿</span></div><div class="frow"><span>北方华创</span><span class="fin">+10.06亿</span></div><div class="frow"><span>英维克</span><span class="fin">+6.45亿</span></div><div class="frow"><span>中国电信</span><span class="fin">+2.19亿</span></div><div class="frow"><span>泛微网络</span><span class="fin">+1.63亿</span></div><div class="frow"><span>华勤技术</span><span class="fin">+1.50亿</span></div><div class="frow"><span>盛科通信</span><span class="fin">+1.13亿</span></div><div class="frow"><span>恒立液压</span><span class="fin">+1.01亿</span></div></div><div class="fcol"><div class="fhead fout">净流出 TOP</div><div class="frow"><span>新易盛</span><span class="fout">-61.75亿</span></div><div class="frow"><span>中际旭创</span><span class="fout">-55.14亿</span></div><div class="frow"><span>寒武纪</span><span class="fout">-34.60亿</span></div><div class="frow"><span>绿的谐波</span><span class="fout">-29.27亿</span></div><div class="frow"><span>中兴通讯</span><span class="fout">-29.22亿</span></div><div class="frow"><span>浪潮信息</span><span class="fout">-12.72亿</span></div><div class="frow"><span>紫光股份</span><span class="fout">-11.90亿</span></div><div class="frow"><span>科大讯飞</span><span class="fout">-11.67亿</span></div></div></div></div>
@@ -828,6 +836,76 @@ a{color:#60a5fa;text-decoration:none}a:hover{text-decoration:underline}
 <td class="muted">-34.60亿</td>
 <td><a href="reports/寒武纪_688256.html" target="_blank">报告</a></td></tr>
 </tbody></table>
+
+<div class="sect">📅 AI行业重要事件 / 潜在催化剂（按时间）</div>
+<div class="muted" style="margin:-4px 0 10px">可能引发股价大幅波动的窗口：财报 · 大会 · 产品技术突破 · IPO/投资 · 宏观。🔴=高影响 🟡=中影响</div>
+<div class="evlist"><div class="ev">
+<div class="ev-date">7月中旬(预计)</div>
+<div class="ev-body">
+<div class="ev-h"><span class="ev-cat" style="background:#a855f722;color:#a855f7">财报</span>
+<span class="ev-imp">🔴高</span><a class="news-t" href="https://investor.tsmc.com/" target="_blank">台积电 Q2 法说会</a></div>
+<div class="news-link">影响：全球AI算力capex与先进制程/CoWoS产能风向标，直接影响光模块与芯片链情绪</div>
+<div class="news-tks"><span class="tk">中际旭创</span> <span class="tk">新易盛</span> <span class="tk">中芯国际</span> <span class="tk">北方华创</span></div></div></div><div class="ev">
+<div class="ev-date">7月17-20日</div>
+<div class="ev-body">
+<div class="ev-h"><span class="ev-cat" style="background:#3b82f622;color:#3b82f6">会议</span>
+<span class="ev-imp">🔴高</span><a class="news-t" href="https://www.worldaic.com.cn/" target="_blank">WAIC 2026 世界人工智能大会(上海)</a></div>
+<div class="news-link">影响：国产大模型/AI应用/机器人密集发布，年度情绪高点，主题轮动催化</div>
+<div class="news-tks"><span class="tk">科大讯飞</span> <span class="tk">金山办公</span> <span class="tk">寒武纪</span> <span class="tk">中科创达</span></div></div></div><div class="ev">
+<div class="ev-date">7月底/9月中/10月底/12月中</div>
+<div class="ev-body">
+<div class="ev-h"><span class="ev-cat" style="background:#64748b22;color:#64748b">宏观</span>
+<span class="ev-imp">🟡中</span><span class="news-t">美联储议息会议(下半年4次)</span></div>
+<div class="news-link">影响：影响全球流动性与高估值成长股估值，降息预期变化常引发AI/科技股波动</div>
+<div class="news-tks"></div></div></div><div class="ev">
+<div class="ev-date">8月26日(美东盘后)</div>
+<div class="ev-body">
+<div class="ev-h"><span class="ev-cat" style="background:#a855f722;color:#a855f7">财报</span>
+<span class="ev-imp">🔴高</span><a class="news-t" href="https://nvidianews.nvidia.com/" target="_blank">英伟达 Q2 FY27 财报</a></div>
+<div class="news-link">影响：全球AI龙头业绩与下季指引(Q2指引约910亿美元)，是算力链最强情绪锚，常引发隔夜大波动</div>
+<div class="news-tks"><span class="tk">中际旭创</span> <span class="tk">新易盛</span> <span class="tk">浪潮信息</span> <span class="tk">英维克</span></div></div></div><div class="ev">
+<div class="ev-date">8月31日截止</div>
+<div class="ev-body">
+<div class="ev-h"><span class="ev-cat" style="background:#a855f722;color:#a855f7">财报</span>
+<span class="ev-imp">🔴高</span><span class="news-t">A股半年报披露截止(AI50中报集中8月下旬)</span></div>
+<div class="news-link">影响：业绩兑现 or 证伪的关键窗口；高估值算力股(寒武纪/海光/中际旭创等)对中报敏感，易大幅波动</div>
+<div class="news-tks"><span class="tk">寒武纪</span> <span class="tk">海光信息</span> <span class="tk">中际旭创</span> <span class="tk">新易盛</span></div></div></div><div class="ev">
+<div class="ev-date">Q3(7-9月)</div>
+<div class="ev-body">
+<div class="ev-h"><span class="ev-cat" style="background:#16a34a22;color:#16a34a">产品/技术</span>
+<span class="ev-imp">🔴高</span><a class="news-t" href="https://en.wikipedia.org/wiki/Rubin_(microarchitecture)" target="_blank">英伟达 Vera Rubin 平台量产出货</a></div>
+<div class="news-link">影响：新一轮算力升级(3nm+HBM4，推理大幅提升)，利好光模块/HBM/铜连接/液冷新需求</div>
+<div class="news-tks"><span class="tk">中际旭创</span> <span class="tk">新易盛</span> <span class="tk">英维克</span> <span class="tk">中恒电气</span></div></div></div><div class="ev">
+<div class="ev-date">9月初(预计)</div>
+<div class="ev-body">
+<div class="ev-h"><span class="ev-cat" style="background:#3b82f622;color:#3b82f6">会议</span>
+<span class="ev-imp">🟡中</span><a class="news-t" href="https://yunqi.aliyun.com/" target="_blank">阿里云栖大会(杭州)</a></div>
+<div class="news-link">影响：通义大模型与AI基建(阿里3800亿投入)进展，国产云/应用催化</div>
+<div class="news-tks"><span class="tk">浪潮信息</span> <span class="tk">金山办公</span> <span class="tk">恒生电子</span></div></div></div><div class="ev">
+<div class="ev-date">9月(预计)</div>
+<div class="ev-body">
+<div class="ev-h"><span class="ev-cat" style="background:#16a34a22;color:#16a34a">产品/技术</span>
+<span class="ev-imp">🟡中</span><a class="news-t" href="https://www.apple.com/" target="_blank">苹果秋季发布会(iPhone新品)</a></div>
+<div class="news-link">影响：端侧AI与果链需求，影响SoC/声学/连接等端侧标的</div>
+<div class="news-tks"><span class="tk">瑞芯微</span> <span class="tk">恒玄科技</span> <span class="tk">德赛西威</span></div></div></div><div class="ev">
+<div class="ev-date">9月(预计)</div>
+<div class="ev-body">
+<div class="ev-h"><span class="ev-cat" style="background:#3b82f622;color:#3b82f6">会议</span>
+<span class="ev-imp">🔴高</span><a class="news-t" href="https://www.huawei.com/cn/events/huaweiconnect" target="_blank">华为全联接大会(HUAWEI CONNECT)</a></div>
+<div class="news-link">影响：昇腾/鸿蒙/盘古大模型进展，国产算力自主主线，常带动信创与国产芯</div>
+<div class="news-tks"><span class="tk">海光信息</span> <span class="tk">寒武纪</span> <span class="tk">中科曙光</span> <span class="tk">中国软件</span></div></div></div><div class="ev">
+<div class="ev-date">下半年(进程中)</div>
+<div class="ev-body">
+<div class="ev-h"><span class="ev-cat" style="background:#f59e0b22;color:#f59e0b">IPO/投资</span>
+<span class="ev-imp">🟡中</span><a class="news-t" href="https://news.pedaily.cn/20260126/122846.shtml" target="_blank">燧原科技 科创板IPO(腾讯重仓，1月已受理)</a></div>
+<div class="news-link">影响：国产GPU新标的上市，板块比价与情绪外溢，影响算力芯片估值锚</div>
+<div class="news-tks"><span class="tk">寒武纪</span> <span class="tk">海光信息</span></div></div></div><div class="ev">
+<div class="ev-date">不定期·持续关注</div>
+<div class="ev-body">
+<div class="ev-h"><span class="ev-cat" style="background:#16a34a22;color:#16a34a">产品/技术</span>
+<span class="ev-imp">🔴高</span><span class="news-t">国产大模型重磅迭代(DeepSeek/通义/Kimi等新版本)</span></div>
+<div class="news-link">影响：类&quot;DeepSeek时刻&quot;可瞬间引爆国产算力与应用全链，最难预测但弹性最大</div>
+<div class="news-tks"><span class="tk">寒武纪</span> <span class="tk">海光信息</span> <span class="tk">科大讯飞</span> <span class="tk">金山办公</span></div></div></div></div>
 
 <div class="sect">🌐 海外大厂动态 → A股AI链传导</div>
 <div class="news">
