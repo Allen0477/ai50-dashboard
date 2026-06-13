@@ -1,0 +1,879 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>中国AI50 交易看板</title><style>
+*{box-sizing:border-box}body{margin:0;font-family:-apple-system,'Microsoft YaHei',Segoe UI,sans-serif;background:#0f172a;color:#e2e8f0;font-size:13px}
+.wrap{max-width:1500px;margin:0 auto;padding:18px}
+h1{font-size:20px;margin:0 0 2px}.sub{color:#94a3b8;font-size:12px;margin-bottom:14px}
+.live{color:#16a34a;font-weight:700}.stale{color:#f59e0b;font-weight:700}
+.muted{color:#64748b;font-size:11px}.warn{color:#f59e0b;margin-left:4px;font-size:11px}
+.pos{color:#a5b4cb;font-size:11px;display:block;margin:2px 0;max-width:230px;line-height:1.35}
+.panels{display:grid;grid-template-columns:1.1fr .8fr 1.1fr;gap:12px;margin-bottom:16px}
+.card{background:#1e293b;border:1px solid #334155;border-radius:10px;padding:12px}
+.card h3{margin:0 0 10px;font-size:13px;color:#cbd5e1}
+.fcols{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fhead{font-size:11px;font-weight:700;margin-bottom:6px}.fin{color:#dc2626}.fout{color:#16a34a}
+.frow{display:flex;justify-content:space-between;padding:2px 0;font-size:12px}
+.temp{text-align:center}.tempv{font-size:40px;font-weight:800;line-height:1}
+.tempbar{height:10px;border-radius:5px;background:linear-gradient(90deg,#16a34a,#f59e0b,#dc2626);position:relative;margin:10px 0}
+.tempptr{position:absolute;top:-3px;width:3px;height:16px;background:#fff;border-radius:2px}
+.sigcount{display:flex;gap:6px;justify-content:center;margin-top:8px;flex-wrap:wrap}
+.sigchip{padding:3px 8px;border-radius:6px;font-size:11px;font-weight:700}
+.tip{display:flex;gap:14px}.tip-col{flex:1}.tip-lab{font-weight:700;margin-bottom:6px}
+.tip-lab.up,.chgrow.up b{color:#16a34a}.tip-lab.down,.chgrow.down b{color:#dc2626}
+.chgrow{padding:3px 0;font-size:12px}
+.toolbar{display:flex;gap:8px;align-items:center;margin:10px 0;flex-wrap:wrap}
+.toolbar button{background:#1e293b;border:1px solid #334155;color:#cbd5e1;padding:5px 10px;border-radius:6px;cursor:pointer;font-size:12px}
+.toolbar button.on{background:#2563eb;border-color:#2563eb;color:#fff}
+table{width:100%;border-collapse:collapse;background:#1e293b;border-radius:10px;overflow:hidden}
+th,td{padding:7px 8px;text-align:center;border-bottom:1px solid #293548}
+th{background:#0f172a;color:#94a3b8;font-size:11px;cursor:pointer;position:sticky;top:0;white-space:nowrap}
+th:hover{color:#fff}.nm{text-align:left}.rk{color:#64748b}
+tr:hover td{background:#243044}
+.bar{position:relative;background:#0f172a;border-radius:4px;height:16px;width:64px;margin:0 auto}
+.barfill{height:100%;border-radius:4px}.barv{position:absolute;left:0;right:0;top:0;font-size:10px;line-height:16px;color:#e2e8f0}
+a{color:#60a5fa;text-decoration:none}a:hover{text-decoration:underline}
+.news{border-left:3px solid #334155;padding:6px 0 6px 10px;margin-bottom:10px}
+.news-h{display:flex;gap:8px;align-items:center;font-size:11px;margin-bottom:3px}
+.news-co{font-weight:700;color:#cbd5e1}.news-imp{font-weight:700}
+.news-t{font-size:13px;display:block;margin:2px 0;color:#e2e8f0}.news-t:hover{color:#60a5fa}
+.news-link{font-size:11px;color:#94a3b8}.news-tks{margin-top:4px}
+.tk{display:inline-block;background:#334155;color:#cbd5e1;padding:1px 7px;border-radius:10px;font-size:10px;margin:2px 3px 0 0}
+.sect{margin:20px 0 10px;font-size:15px;font-weight:700;border-left:4px solid #2563eb;padding-left:8px}
+.foot{color:#475569;font-size:11px;margin-top:20px;line-height:1.6}
+</style></head><body><div class="wrap">
+<h1>中国AI 50 · 交易决策看板 <span class="live">● 当日实时</span></h1>
+<div class="sub">数据日期 2026-06-13 · 生成于 2026-06-13 22:18 · 共 50 只 · 信号灯=资金30%/估值(扣非)25%/技术25%/情绪20%</div>
+
+<div class="panels">
+  <div class="card"><h3>💰 资金流向榜（主力5日净额·DDE）</h3><div class="fcols"><div class="fcol"><div class="fhead fin">净流入 TOP</div><div class="frow"><span>海光信息</span><span class="fin">+28.14亿</span></div><div class="frow"><span>北方华创</span><span class="fin">+10.06亿</span></div><div class="frow"><span>英维克</span><span class="fin">+6.45亿</span></div><div class="frow"><span>中国电信</span><span class="fin">+2.19亿</span></div><div class="frow"><span>泛微网络</span><span class="fin">+1.63亿</span></div><div class="frow"><span>华勤技术</span><span class="fin">+1.50亿</span></div><div class="frow"><span>盛科通信</span><span class="fin">+1.13亿</span></div><div class="frow"><span>恒立液压</span><span class="fin">+1.01亿</span></div></div><div class="fcol"><div class="fhead fout">净流出 TOP</div><div class="frow"><span>新易盛</span><span class="fout">-61.75亿</span></div><div class="frow"><span>中际旭创</span><span class="fout">-55.14亿</span></div><div class="frow"><span>寒武纪</span><span class="fout">-34.60亿</span></div><div class="frow"><span>绿的谐波</span><span class="fout">-29.27亿</span></div><div class="frow"><span>中兴通讯</span><span class="fout">-29.22亿</span></div><div class="frow"><span>浪潮信息</span><span class="fout">-12.72亿</span></div><div class="frow"><span>紫光股份</span><span class="fout">-11.90亿</span></div><div class="frow"><span>科大讯飞</span><span class="fout">-11.67亿</span></div></div></div></div>
+  <div class="card temp"><h3>🌡 活跃度 / 情绪温计</h3>
+     <div class="tempv" style="color:#f59e0b">50</div>
+     <div class="tempbar"><div class="tempptr" style="left:50%"></div></div>
+     <div class="muted">涨 25 / 跌 25 板块均涨 -0.42%</div>
+     <div class="sigcount"><span class="sigchip" style="background:#16a34a22;color:#16a34a">加仓 4</span><span class="sigchip" style="background:#64748b22;color:#64748b">持有 22</span><span class="sigchip" style="background:#f59e0b22;color:#f59e0b">减仓 20</span><span class="sigchip" style="background:#dc262622;color:#dc2626">清仓 4</span></div></div>
+  <div class="card"><h3>🎯 今日决策提示</h3><div class="tip"><div class="chgrow up">今日<b>加仓候选</b>：中国电信 · 华勤技术 · 中国联通 · 北方华创</div><div class="chgrow down">今日<b>减/清仓</b>：美年健康 · 英维克 · 恒生电子 · 金盘科技 · 德赛西威 · 中国软件</div><div class="muted" style="margin-top:6px">（首次运行无昨日对比；刷新后将显示信号升降级变化）</div></div></div>
+</div>
+
+<div class="toolbar">
+  <span class="muted">筛选信号：</span>
+  <button class="fbtn on" onclick="filt('all',this)">全部</button>
+  <button class="fbtn" onclick="filt('加仓',this)">加仓</button>
+  <button class="fbtn" onclick="filt('持有',this)">持有</button>
+  <button class="fbtn" onclick="filt('减仓',this)">减仓</button>
+  <button class="fbtn" onclick="filt('清仓',this)">清仓</button>
+  <select onchange="filtTheme(this.value)" style="background:#1e293b;color:#cbd5e1;border:1px solid #334155;border-radius:6px;padding:5px"><option value="all">全部赛道</option><option value="AI应用/软件">AI应用/软件</option><option value="光模块/CPO">光模块/CPO</option><option value="医疗AI">医疗AI</option><option value="半导体设备">半导体设备</option><option value="数据中心/IDC">数据中心/IDC</option><option value="服务器/ODM">服务器/ODM</option><option value="汽车智能">汽车智能</option><option value="液冷/温控">液冷/温控</option><option value="算力芯片">算力芯片</option><option value="通信/运营商">通信/运营商</option></select>
+  <span class="muted">点表头排序 · 🔥=海外利好命中 · ⚠损益=一次性损益预警</span>
+</div>
+
+<table id="mt"><thead><tr>
+<th onclick="sortT(0,this)">#</th><th class="nm">股票/赛道</th>
+<th onclick="sortT(2,this)">信号</th><th onclick="sortT(3,this)">综合分</th>
+<th onclick="sortT(4,this)">资金</th><th onclick="sortT(5,this)">估值</th>
+<th onclick="sortT(6,this)">技术</th><th onclick="sortT(7,this)">情绪</th>
+<th onclick="sortT(8,this)">股价</th><th onclick="sortT(9,this)">涨跌幅</th>
+<th onclick="sortT(10,this)">总市值<br><span class="muted">亿元</span></th><th onclick="sortT(11,this)">PE</th>
+<th onclick="sortT(12,this)">净利增速</th><th onclick="sortT(13,this)">主力净额<br><span class="muted">DDE5日</span></th><th>报告</th>
+</tr></thead><tbody>
+<tr data-sig="加仓" data-theme="通信/运营商">
+<td class="rk">1</td>
+<td class="nm"><b>中国电信</b><br><span class="pos">运营商，天翼云与算力</span><br><span class="muted">601728.SH · 通信/运营商</span></td>
+<td class="sig" style="color:#16a34a;font-weight:700">▲ 加仓</td>
+<td class="ov">78<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:95%;background:#16a34a"></div><span class="barv">95</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:88%;background:#16a34a"></div><span class="barv">88</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:67%;background:#16a34a"></div><span class="barv">67</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>6.05</td>
+<td><span style="color:#16a34a">-3.04%</span></td>
+<td class="muted">5,289亿</td>
+<td class="muted">17.5</td>
+<td class="muted">-17.1%</td>
+<td class="muted">2.19亿</td>
+<td><a href="reports/中国电信_601728.html" target="_blank">报告</a></td></tr><tr data-sig="加仓" data-theme="服务器/ODM">
+<td class="rk">2</td>
+<td class="nm"><b>华勤技术</b><br><span class="pos">全球ODM龙头(手机/PC/服务器)</span><br><span class="muted">603296.SH · 服务器/ODM</span></td>
+<td class="sig" style="color:#16a34a;font-weight:700">▲ 加仓</td>
+<td class="ov">71<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:82%;background:#16a34a"></div><span class="barv">82</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:79%;background:#16a34a"></div><span class="barv">79</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:66%;background:#16a34a"></div><span class="barv">66</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>102.77</td>
+<td><span style="color:#16a34a">-1.92%</span></td>
+<td class="muted">1,108亿</td>
+<td class="muted">26.7</td>
+<td class="muted">26.0%</td>
+<td class="muted">1.50亿</td>
+<td><a href="reports/华勤技术_603296.html" target="_blank">报告</a></td></tr><tr data-sig="加仓" data-theme="通信/运营商">
+<td class="rk">3</td>
+<td class="nm"><b>中国联通</b><br><span class="pos">运营商，算力与AI应用落地</span><br><span class="muted">600050.SH · 通信/运营商</span></td>
+<td class="sig" style="color:#16a34a;font-weight:700">▲ 加仓</td>
+<td class="ov">69<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:75%;background:#16a34a"></div><span class="barv">75</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:93%;background:#16a34a"></div><span class="barv">93</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:50%;background:#f59e0b"></div><span class="barv">50</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>4.37</td>
+<td><span style="color:#dc2626">+0.23%</span></td>
+<td class="muted">1,366亿</td>
+<td class="muted">15.8</td>
+<td class="muted">-18.0%</td>
+<td class="muted">-0.25亿</td>
+<td><a href="reports/中国联通_600050.html" target="_blank">报告</a></td></tr><tr data-sig="加仓" data-theme="半导体设备">
+<td class="rk">4</td>
+<td class="nm"><b>北方华创</b>🔥<br><span class="pos">国产半导体设备龙头(刻蚀/薄膜)</span><br><span class="muted">002371.SZ · 半导体设备</span></td>
+<td class="sig" style="color:#16a34a;font-weight:700">▲ 加仓</td>
+<td class="ov">69<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:99%;background:#16a34a"></div><span class="barv">99</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:26%;background:#dc2626"></div><span class="barv">26</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:82%;background:#16a34a"></div><span class="barv">82</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:60%;background:#f59e0b"></div><span class="barv">60</span></div></td>
+<td>667.19</td>
+<td><span style="color:#dc2626">+4.66%</span></td>
+<td class="muted">4,836亿</td>
+<td class="muted">86.7</td>
+<td class="muted">3.4%</td>
+<td class="muted">10.06亿</td>
+<td><a href="reports/北方华创_002371.html" target="_blank">报告</a></td></tr><tr data-sig="持有" data-theme="汽车智能">
+<td class="rk">5</td>
+<td class="nm"><b>恒立液压</b><br><span class="pos">液压件龙头(机器人/工程机械)</span><br><span class="muted">601100.SH · 汽车智能</span></td>
+<td class="sig" style="color:#64748b;font-weight:700">● 持有</td>
+<td class="ov">67<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:88%;background:#16a34a"></div><span class="barv">88</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:33%;background:#dc2626"></div><span class="barv">33</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:88%;background:#16a34a"></div><span class="barv">88</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>114.54</td>
+<td><span style="color:#16a34a">-6.51%</span></td>
+<td class="muted">1,536亿</td>
+<td class="muted">55.5</td>
+<td class="muted">5.6%</td>
+<td class="muted">1.01亿</td>
+<td><a href="reports/恒立液压_601100.html" target="_blank">报告</a></td></tr><tr data-sig="持有" data-theme="通信/运营商">
+<td class="rk">6</td>
+<td class="nm"><b>中国移动</b><br><span class="pos">运营商龙头，东数西算/算力网络主力</span><br><span class="muted">600941.SH · 通信/运营商</span></td>
+<td class="sig" style="color:#64748b;font-weight:700">● 持有</td>
+<td class="ov">67<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:58%;background:#f59e0b"></div><span class="barv">58</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:85%;background:#16a34a"></div><span class="barv">85</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:72%;background:#16a34a"></div><span class="barv">72</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>95.12</td>
+<td><span style="color:#16a34a">-0.89%</span></td>
+<td class="muted">15,632亿</td>
+<td class="muted">15.2</td>
+<td class="muted">-4.2%</td>
+<td class="muted">-2.43亿</td>
+<td><span class="muted">—</span></td></tr><tr data-sig="持有" data-theme="AI应用/软件">
+<td class="rk">7</td>
+<td class="nm"><b>东软集团</b><br><span class="pos">老牌行业软件龙头(医疗/汽车/社保)</span><br><span class="muted">600718.SH · AI应用/软件</span></td>
+<td class="sig" style="color:#64748b;font-weight:700">● 持有</td>
+<td class="ov">66<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:80%;background:#16a34a"></div><span class="barv">80</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:91%;background:#16a34a"></div><span class="barv">91</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:36%;background:#dc2626"></div><span class="barv">36</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>7.84</td>
+<td><span style="color:#dc2626">+1.42%</span></td>
+<td class="muted">94亿</td>
+<td class="muted">-19.0</td>
+<td class="muted">-1,120.1%</td>
+<td class="muted">-0.19亿</td>
+<td><a href="reports/东软集团_600718.html" target="_blank">报告</a></td></tr><tr data-sig="持有" data-theme="AI应用/软件">
+<td class="rk">8</td>
+<td class="nm"><b>泛微网络</b><br><span class="pos">协同办公(OA)龙头，AI办公</span><br><span class="muted">603039.SH · AI应用/软件</span></td>
+<td class="sig" style="color:#64748b;font-weight:700">● 持有</td>
+<td class="ov">65<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:89%;background:#16a34a"></div><span class="barv">89</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:51%;background:#f59e0b"></div><span class="barv">51</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:61%;background:#f59e0b"></div><span class="barv">61</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>47.61</td>
+<td><span style="color:#dc2626">+4.50%</span></td>
+<td class="muted">146亿</td>
+<td class="muted">45.1</td>
+<td class="muted">137.9%</td>
+<td class="muted">1.63亿</td>
+<td><a href="reports/泛微网络603039.html" target="_blank">报告</a></td></tr><tr data-sig="持有" data-theme="AI应用/软件">
+<td class="rk">9</td>
+<td class="nm"><b>博思软件</b><br><span class="pos">财政电子票据/政务信息化龙头</span><br><span class="muted">300525.SZ · AI应用/软件</span></td>
+<td class="sig" style="color:#64748b;font-weight:700">● 持有</td>
+<td class="ov">63<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:84%;background:#16a34a"></div><span class="barv">84</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:72%;background:#16a34a"></div><span class="barv">72</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:35%;background:#dc2626"></div><span class="barv">35</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>9.18</td>
+<td><span style="color:#dc2626">+0.77%</span></td>
+<td class="muted">70亿</td>
+<td class="muted">39.8</td>
+<td class="muted">1.7%</td>
+<td class="muted">0.51亿</td>
+<td><a href="reports/博思软件_300525.html" target="_blank">报告</a></td></tr><tr data-sig="持有" data-theme="医疗AI">
+<td class="rk">10</td>
+<td class="nm"><b>卫宁健康</b><br><span class="pos">医疗信息化龙头，医疗大模型WiNGPT</span><br><span class="muted">300253.SZ · 医疗AI</span></td>
+<td class="sig" style="color:#64748b;font-weight:700">● 持有</td>
+<td class="ov">60<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:73%;background:#16a34a"></div><span class="barv">73</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:73%;background:#16a34a"></div><span class="barv">73</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:37%;background:#dc2626"></div><span class="barv">37</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>7.18</td>
+<td><span style="color:#dc2626">+3.31%</span></td>
+<td class="muted">158亿</td>
+<td class="muted">-43.3</td>
+<td class="muted">165.3%</td>
+<td class="muted">-0.32亿</td>
+<td><a href="reports/卫宁健康300253.html" target="_blank">报告</a></td></tr><tr data-sig="持有" data-theme="AI应用/软件">
+<td class="rk">11</td>
+<td class="nm"><b>用友网络</b><br><span class="pos">企业管理软件(ERP)龙头，AI+财务</span><br><span class="muted">600588.SH · AI应用/软件</span></td>
+<td class="sig" style="color:#64748b;font-weight:700">● 持有</td>
+<td class="ov">59<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:76%;background:#16a34a"></div><span class="barv">76</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:69%;background:#16a34a"></div><span class="barv">69</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:32%;background:#dc2626"></div><span class="barv">32</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>10.00</td>
+<td><span style="color:#dc2626">+1.01%</span></td>
+<td class="muted">342亿</td>
+<td class="muted">-24.8</td>
+<td class="muted">1.8%</td>
+<td class="muted">-0.36亿</td>
+<td><a href="reports/用友网络600588.html" target="_blank">报告</a></td></tr><tr data-sig="持有" data-theme="通信/运营商">
+<td class="rk">12</td>
+<td class="nm"><b>中兴通讯</b><br><span class="pos">通信设备龙头，发力AI服务器与算力网络</span><br><span class="muted">000063.SZ · 通信/运营商</span></td>
+<td class="sig" style="color:#64748b;font-weight:700">● 持有</td>
+<td class="ov">56<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:35%;background:#dc2626"></div><span class="barv">35</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:79%;background:#16a34a"></div><span class="barv">79</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:58%;background:#f59e0b"></div><span class="barv">58</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>36.35</td>
+<td><span style="color:#16a34a">-3.86%</span></td>
+<td class="muted">1,635亿</td>
+<td class="muted">38.9</td>
+<td class="muted">-46.6%</td>
+<td class="muted">-29.22亿</td>
+<td><a href="reports/中兴通讯_000063.html" target="_blank">报告</a></td></tr><tr data-sig="持有" data-theme="算力芯片">
+<td class="rk">13</td>
+<td class="nm"><b>盛科通信</b><br><span class="pos">国产以太网交换芯片龙头</span><br><span class="muted">688702.SH · 算力芯片</span></td>
+<td class="sig" style="color:#64748b;font-weight:700">● 持有</td>
+<td class="ov">55<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:73%;background:#16a34a"></div><span class="barv">73</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:34%;background:#dc2626"></div><span class="barv">34</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:56%;background:#f59e0b"></div><span class="barv">56</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>252.95</td>
+<td><span style="color:#16a34a">-4.23%</span></td>
+<td class="muted">1,037亿</td>
+<td class="muted">-683.3</td>
+<td class="muted">-12.1%</td>
+<td class="muted">1.13亿</td>
+<td><span class="muted">—</span></td></tr><tr data-sig="持有" data-theme="服务器/ODM">
+<td class="rk">14</td>
+<td class="nm"><b>智微智能</b><br><span class="pos">AI服务器/边缘计算硬件ODM</span><br><span class="muted">001339.SZ · 服务器/ODM</span></td>
+<td class="sig" style="color:#64748b;font-weight:700">● 持有</td>
+<td class="ov">55<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:74%;background:#16a34a"></div><span class="barv">74</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:33%;background:#dc2626"></div><span class="barv">33</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:55%;background:#f59e0b"></div><span class="barv">55</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>97.40</td>
+<td><span style="color:#dc2626">+0.72%</span></td>
+<td class="muted">246亿</td>
+<td class="muted">103.3</td>
+<td class="muted">159.1%</td>
+<td class="muted">-0.19亿</td>
+<td><span class="muted">—</span></td></tr><tr data-sig="持有" data-theme="数据中心/IDC">
+<td class="rk">15</td>
+<td class="nm"><b>宝信软件</b><br><span class="pos">钢铁工业软件+IDC双主业(宝武系)</span><br><span class="muted">600845.SH · 数据中心/IDC</span></td>
+<td class="sig" style="color:#64748b;font-weight:700">● 持有</td>
+<td class="ov">55<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:66%;background:#16a34a"></div><span class="barv">66</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:59%;background:#f59e0b"></div><span class="barv">59</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:39%;background:#dc2626"></div><span class="barv">39</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>17.93</td>
+<td><span style="color:#dc2626">+0.11%</span></td>
+<td class="muted">429亿</td>
+<td class="muted">41.5</td>
+<td class="muted">-14.3%</td>
+<td class="muted">-0.97亿</td>
+<td><a href="reports/宝信软件600845.html" target="_blank">报告</a></td></tr><tr data-sig="持有" data-theme="服务器/ODM">
+<td class="rk">16</td>
+<td class="nm"><b>软通动力</b><br><span class="pos">IT服务与数字化龙头，华为鸿蒙生态核心服务商</span><br><span class="muted">301236.SZ · 服务器/ODM</span></td>
+<td class="sig" style="color:#64748b;font-weight:700">● 持有</td>
+<td class="ov">54<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:52%;background:#f59e0b"></div><span class="barv">52</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:56%;background:#f59e0b"></div><span class="barv">56</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:57%;background:#f59e0b"></div><span class="barv">57</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>39.75</td>
+<td><span style="color:#16a34a">-3.36%</span></td>
+<td class="muted">411亿</td>
+<td class="muted">763.3</td>
+<td class="muted">-77.0%</td>
+<td class="muted">-3.54亿</td>
+<td><span class="muted">—</span></td></tr><tr data-sig="持有" data-theme="算力芯片">
+<td class="rk">17</td>
+<td class="nm"><b>海光信息</b>🔥<br><span class="pos">国产高端CPU/DCU，信创算力核心</span><br><span class="muted">688041.SH · 算力芯片</span></td>
+<td class="sig" style="color:#64748b;font-weight:700">● 持有</td>
+<td class="ov">54<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:77%;background:#16a34a"></div><span class="barv">77</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:9%;background:#dc2626"></div><span class="barv">9</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:67%;background:#16a34a"></div><span class="barv">67</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:60%;background:#f59e0b"></div><span class="barv">60</span></div></td>
+<td>280.00</td>
+<td><span style="color:#16a34a">-3.39%</span></td>
+<td class="muted">6,508亿</td>
+<td class="muted">238.7</td>
+<td class="muted">35.8%</td>
+<td class="muted">28.14亿</td>
+<td><span class="muted">—</span></td></tr><tr data-sig="持有" data-theme="AI应用/软件">
+<td class="rk">18</td>
+<td class="nm"><b>海天瑞声</b><br><span class="pos">AI训练数据(语料)龙头供应商</span><br><span class="muted">688787.SH · AI应用/软件</span></td>
+<td class="sig" style="color:#64748b;font-weight:700">● 持有</td>
+<td class="ov">54<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:65%;background:#16a34a"></div><span class="barv">65</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:12%;background:#dc2626"></div><span class="barv">12</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:81%;background:#16a34a"></div><span class="barv">81</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>153.89</td>
+<td><span style="color:#dc2626">+0.58%</span></td>
+<td class="muted">93亿</td>
+<td class="muted">419.1</td>
+<td class="muted">2,161.1%</td>
+<td class="muted">-1.06亿</td>
+<td><span class="muted">—</span></td></tr><tr data-sig="持有" data-theme="AI应用/软件">
+<td class="rk">19</td>
+<td class="nm"><b>中科创达</b><br><span class="pos">智能操作系统/边缘智能(汽车+端侧AI)</span><br><span class="muted">300496.SZ · AI应用/软件</span></td>
+<td class="sig" style="color:#64748b;font-weight:700">● 持有</td>
+<td class="ov">53<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:46%;background:#f59e0b"></div><span class="barv">46</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:66%;background:#16a34a"></div><span class="barv">66</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:50%;background:#f59e0b"></div><span class="barv">50</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>59.78</td>
+<td><span style="color:#dc2626">+0.66%</span></td>
+<td class="muted">276亿</td>
+<td class="muted">60.0</td>
+<td class="muted">10.6%</td>
+<td class="muted">-1.37亿</td>
+<td><a href="reports/中科创达_300496.html" target="_blank">报告</a></td></tr><tr data-sig="持有" data-theme="液冷/温控">
+<td class="rk">20</td>
+<td class="nm"><b>麦格米特</b><br><span class="pos">电力电子平台(电源/数据中心供电)</span><br><span class="muted">002851.SZ · 液冷/温控</span></td>
+<td class="sig" style="color:#64748b;font-weight:700">● 持有</td>
+<td class="ov">53<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:69%;background:#16a34a"></div><span class="barv">69</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:23%;background:#dc2626"></div><span class="barv">23</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:66%;background:#16a34a"></div><span class="barv">66</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>135.24</td>
+<td><span style="color:#16a34a">-2.99%</span></td>
+<td class="muted">787亿</td>
+<td class="muted">513.6</td>
+<td class="muted">6.9%</td>
+<td class="muted">-1.33亿</td>
+<td><span class="muted">—</span></td></tr><tr data-sig="持有" data-theme="算力芯片">
+<td class="rk">21</td>
+<td class="nm"><b>乐鑫科技</b><br><span class="pos">WiFi MCU/AIoT芯片全球龙头</span><br><span class="muted">688018.SH · 算力芯片</span></td>
+<td class="sig" style="color:#64748b;font-weight:700">● 持有</td>
+<td class="ov">53<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:72%;background:#16a34a"></div><span class="barv">72</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:44%;background:#dc2626"></div><span class="barv">44</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:41%;background:#dc2626"></div><span class="barv">41</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>112.00</td>
+<td><span style="color:#16a34a">-0.39%</span></td>
+<td class="muted">263亿</td>
+<td class="muted">48.6</td>
+<td class="muted">44.8%</td>
+<td class="muted">-0.77亿</td>
+<td><a href="reports/乐鑫科技_688018.html" target="_blank">报告</a></td></tr><tr data-sig="持有" data-theme="AI应用/软件">
+<td class="rk">22</td>
+<td class="nm"><b>税友股份</b><br><span class="pos">税务信息化龙头，AI+财税</span><br><span class="muted">603171.SH · AI应用/软件</span></td>
+<td class="sig" style="color:#64748b;font-weight:700">● 持有</td>
+<td class="ov">53<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:81%;background:#16a34a"></div><span class="barv">81</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:31%;background:#dc2626"></div><span class="barv">31</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:41%;background:#dc2626"></div><span class="barv">41</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>45.42</td>
+<td><span style="color:#dc2626">+3.70%</span></td>
+<td class="muted">185亿</td>
+<td class="muted">129.3</td>
+<td class="muted">26.4%</td>
+<td class="muted">-0.10亿</td>
+<td><span class="muted">—</span></td></tr><tr data-sig="持有" data-theme="汽车智能">
+<td class="rk">23</td>
+<td class="nm"><b>潍柴重机</b><br><span class="pos">船用/发电动力(算力柴发概念)</span><br><span class="muted">000880.SZ · 汽车智能</span></td>
+<td class="sig" style="color:#64748b;font-weight:700">● 持有</td>
+<td class="ov">52<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:59%;background:#f59e0b"></div><span class="barv">59</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:64%;background:#f59e0b"></div><span class="barv">64</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:33%;background:#dc2626"></div><span class="barv">33</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>24.50</td>
+<td><span style="color:#dc2626">+2.08%</span></td>
+<td class="muted">114亿</td>
+<td class="muted">43.1</td>
+<td class="muted">76.5%</td>
+<td class="muted">-1.27亿</td>
+<td><span class="muted">—</span></td></tr><tr data-sig="持有" data-theme="算力芯片">
+<td class="rk">24</td>
+<td class="nm"><b>恒玄科技</b><br><span class="pos">智能音频/可穿戴SoC龙头</span><br><span class="muted">688608.SH · 算力芯片</span></td>
+<td class="sig" style="color:#64748b;font-weight:700">● 持有</td>
+<td class="ov">52<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:66%;background:#16a34a"></div><span class="barv">66</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:56%;background:#f59e0b"></div><span class="barv">56</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:28%;background:#dc2626"></div><span class="barv">28</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>146.50</td>
+<td><span style="color:#dc2626">+0.94%</span></td>
+<td class="muted">248亿</td>
+<td class="muted">50.3</td>
+<td class="muted">-53.3%</td>
+<td class="muted">-1.07亿</td>
+<td><span class="muted">—</span></td></tr><tr data-sig="持有" data-theme="AI应用/软件">
+<td class="rk">25</td>
+<td class="nm"><b>深信服</b><br><span class="pos">网络安全+云计算(超融合/SASE)</span><br><span class="muted">300454.SZ · AI应用/软件</span></td>
+<td class="sig" style="color:#64748b;font-weight:700">● 持有</td>
+<td class="ov">51<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:64%;background:#f59e0b"></div><span class="barv">64</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:54%;background:#f59e0b"></div><span class="barv">54</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:30%;background:#dc2626"></div><span class="barv">30</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>97.87</td>
+<td><span style="color:#16a34a">-0.13%</span></td>
+<td class="muted">422亿</td>
+<td class="muted">73.1</td>
+<td class="muted">74.2%</td>
+<td class="muted">-1.22亿</td>
+<td><span class="muted">—</span></td></tr><tr data-sig="持有" data-theme="AI应用/软件">
+<td class="rk">26</td>
+<td class="nm"><b>汉得信息</b><br><span class="pos">企业数字化与ERP实施服务</span><br><span class="muted">300170.SZ · AI应用/软件</span></td>
+<td class="sig" style="color:#64748b;font-weight:700">● 持有</td>
+<td class="ov">50<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:57%;background:#f59e0b"></div><span class="barv">57</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:55%;background:#f59e0b"></div><span class="barv">55</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:34%;background:#dc2626"></div><span class="barv">34</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>17.29</td>
+<td><span style="color:#dc2626">+2.67%</span></td>
+<td class="muted">180亿</td>
+<td class="muted">78.1</td>
+<td class="muted">10.7%</td>
+<td class="muted">-1.29亿</td>
+<td><a href="reports/汉得信息_300170.html" target="_blank">报告</a></td></tr><tr data-sig="减仓" data-theme="医疗AI">
+<td class="rk">27</td>
+<td class="nm"><b>美年健康</b><br><span class="pos">体检龙头，AI医疗+影像</span><br><span class="muted">002044.SZ · 医疗AI</span></td>
+<td class="sig" style="color:#f59e0b;font-weight:700">▼ 减仓</td>
+<td class="ov">50<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:47%;background:#f59e0b"></div><span class="barv">47</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:69%;background:#16a34a"></div><span class="barv">69</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:32%;background:#dc2626"></div><span class="barv">32</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>4.96</td>
+<td><span style="color:#dc2626">+2.06%</span></td>
+<td class="muted">194亿</td>
+<td class="muted">63.5</td>
+<td class="muted">7.4%</td>
+<td class="muted">-1.83亿</td>
+<td><a href="reports/美年健康_002044.html" target="_blank">报告</a></td></tr><tr data-sig="减仓" data-theme="液冷/温控">
+<td class="rk">28</td>
+<td class="nm"><b>英维克</b>🔥<br><span class="pos">数据中心液冷温控龙头</span><br><span class="muted">002837.SZ · 液冷/温控</span></td>
+<td class="sig" style="color:#f59e0b;font-weight:700">▼ 减仓</td>
+<td class="ov">48<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:83%;background:#16a34a"></div><span class="barv">83</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:17%;background:#dc2626"></div><span class="barv">17</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:30%;background:#dc2626"></div><span class="barv">30</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:60%;background:#f59e0b"></div><span class="barv">60</span></div></td>
+<td>66.08</td>
+<td><span style="color:#16a34a">-1.58%</span></td>
+<td class="muted">842亿</td>
+<td class="muted">174.5</td>
+<td class="muted">-82.0%</td>
+<td class="muted">6.45亿</td>
+<td><a href="reports/英维克_002837.html" target="_blank">报告</a></td></tr><tr data-sig="减仓" data-theme="AI应用/软件">
+<td class="rk">29</td>
+<td class="nm"><b>恒生电子</b><br><span class="pos">金融IT绝对龙头，金融大模型</span><br><span class="muted">600570.SH · AI应用/软件</span></td>
+<td class="sig" style="color:#f59e0b;font-weight:700">▼ 减仓</td>
+<td class="ov">48<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:50%;background:#f59e0b"></div><span class="barv">50</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:61%;background:#f59e0b"></div><span class="barv">61</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:31%;background:#dc2626"></div><span class="barv">31</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>21.71</td>
+<td><span style="color:#dc2626">+3.28%</span></td>
+<td class="muted">411亿</td>
+<td class="muted">30.7</td>
+<td class="muted">342.9%</td>
+<td class="muted">-1.49亿</td>
+<td><a href="reports/恒生电子600570.html" target="_blank">报告</a></td></tr><tr data-sig="减仓" data-theme="液冷/温控">
+<td class="rk">30</td>
+<td class="nm"><b>金盘科技</b><br><span class="pos">干式变压器/数据中心配电与储能</span><br><span class="muted">688676.SH · 液冷/温控</span></td>
+<td class="sig" style="color:#f59e0b;font-weight:700">▼ 减仓</td>
+<td class="ov">48<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:48%;background:#f59e0b"></div><span class="barv">48</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:46%;background:#f59e0b"></div><span class="barv">46</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:46%;background:#f59e0b"></div><span class="barv">46</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>80.50</td>
+<td><span style="color:#16a34a">-0.24%</span></td>
+<td class="muted">370亿</td>
+<td class="muted">55.7</td>
+<td class="muted">4.8%</td>
+<td class="muted">-1.34亿</td>
+<td><a href="reports/金盘科技688676.html" target="_blank">报告</a></td></tr><tr data-sig="减仓" data-theme="汽车智能">
+<td class="rk">31</td>
+<td class="nm"><b>德赛西威</b><br><span class="pos">智能汽车域控/智能驾驶龙头Tier1</span><br><span class="muted">002920.SZ · 汽车智能</span></td>
+<td class="sig" style="color:#f59e0b;font-weight:700">▼ 减仓</td>
+<td class="ov">48<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:38%;background:#dc2626"></div><span class="barv">38</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:78%;background:#16a34a"></div><span class="barv">78</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:26%;background:#dc2626"></div><span class="barv">26</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>86.95</td>
+<td><span style="color:#dc2626">+1.72%</span></td>
+<td class="muted">519亿</td>
+<td class="muted">22.2</td>
+<td class="muted">-20.7%</td>
+<td class="muted">-2.51亿</td>
+<td><span class="muted">—</span></td></tr><tr data-sig="减仓" data-theme="AI应用/软件">
+<td class="rk">32</td>
+<td class="nm"><b>中国软件</b><br><span class="pos">国资信创平台(麒麟操作系统)</span><br><span class="muted">600536.SH · AI应用/软件</span></td>
+<td class="sig" style="color:#f59e0b;font-weight:700">▼ 减仓</td>
+<td class="ov">45<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:36%;background:#dc2626"></div><span class="barv">36</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:61%;background:#f59e0b"></div><span class="barv">61</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:35%;background:#dc2626"></div><span class="barv">35</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>29.82</td>
+<td><span style="color:#16a34a">-9.99%</span></td>
+<td class="muted">278亿</td>
+<td class="muted">-807.0</td>
+<td class="muted">8.6%</td>
+<td class="muted">-4.28亿</td>
+<td><a href="reports/中国软件_600536" target="_blank">报告</a></td></tr><tr data-sig="减仓" data-theme="汽车智能">
+<td class="rk">33</td>
+<td class="nm"><b>拓普集团</b><br><span class="pos">汽车零部件平台(布局机器人执行器)</span><br><span class="muted">601689.SH · 汽车智能</span></td>
+<td class="sig" style="color:#f59e0b;font-weight:700">▼ 减仓</td>
+<td class="ov">45<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:23%;background:#dc2626"></div><span class="barv">23</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:66%;background:#16a34a"></div><span class="barv">66</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:45%;background:#f59e0b"></div><span class="barv">45</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>60.62</td>
+<td><span style="color:#16a34a">-1.24%</span></td>
+<td class="muted">1,053亿</td>
+<td class="muted">38.1</td>
+<td class="muted">-2.4%</td>
+<td class="muted">-8.12亿</td>
+<td><a href="reports/拓普集团601689.html" target="_blank">报告</a></td></tr><tr data-sig="减仓" data-theme="数据中心/IDC">
+<td class="rk">34</td>
+<td class="nm"><b>优刻得</b><br><span class="pos">第三方中立云计算/IDC</span><br><span class="muted">688158.SH · 数据中心/IDC</span></td>
+<td class="sig" style="color:#f59e0b;font-weight:700">▼ 减仓</td>
+<td class="ov">45<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:41%;background:#dc2626"></div><span class="barv">41</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:57%;background:#f59e0b"></div><span class="barv">57</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:32%;background:#dc2626"></div><span class="barv">32</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>35.00</td>
+<td><span style="color:#dc2626">+1.21%</span></td>
+<td class="muted">161亿</td>
+<td class="muted">-618.3</td>
+<td class="muted">106.1%</td>
+<td class="muted">-2.80亿</td>
+<td><a href="reports/优刻得_688158.html" target="_blank">报告</a></td></tr><tr data-sig="减仓" data-theme="服务器/ODM">
+<td class="rk">35</td>
+<td class="nm"><b>紫光股份</b><br><span class="pos">ICT设备龙头(新华三，服务器/交换机)</span><br><span class="muted">000938.SZ · 服务器/ODM</span></td>
+<td class="sig" style="color:#f59e0b;font-weight:700">▼ 减仓</td>
+<td class="ov">44<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:16%;background:#dc2626"></div><span class="barv">16</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:73%;background:#16a34a"></div><span class="barv">73</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:41%;background:#dc2626"></div><span class="barv">41</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>25.15</td>
+<td><span style="color:#16a34a">-0.55%</span></td>
+<td class="muted">719亿</td>
+<td class="muted">33.9</td>
+<td class="muted">126.1%</td>
+<td class="muted">-11.90亿</td>
+<td><a href="reports/紫光股份_000938.html" target="_blank">报告</a></td></tr><tr data-sig="清仓" data-theme="服务器/ODM">
+<td class="rk">36</td>
+<td class="nm"><b>浪潮信息</b>🔥<br><span class="pos">全球AI服务器出货龙头</span><br><span class="muted">000977.SZ · 服务器/ODM</span></td>
+<td class="sig" style="color:#dc2626;font-weight:700">✕ 清仓</td>
+<td class="ov">43<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:12%;background:#dc2626"></div><span class="barv">12</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:79%;background:#16a34a"></div><span class="barv">79</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:29%;background:#dc2626"></div><span class="barv">29</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:60%;background:#f59e0b"></div><span class="barv">60</span></div></td>
+<td>57.86</td>
+<td><span style="color:#dc2626">+0.03%</span></td>
+<td class="muted">850亿</td>
+<td class="muted">33.3</td>
+<td class="muted">30.7%</td>
+<td class="muted">-12.72亿</td>
+<td><span class="muted">—</span></td></tr><tr data-sig="减仓" data-theme="通信/运营商">
+<td class="rk">37</td>
+<td class="nm"><b>锐捷网络</b><br><span class="pos">企业网络/数据中心交换机</span><br><span class="muted">301165.SZ · 通信/运营商</span></td>
+<td class="sig" style="color:#f59e0b;font-weight:700">▼ 减仓</td>
+<td class="ov">42<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:51%;background:#f59e0b"></div><span class="barv">51</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:37%;background:#dc2626"></div><span class="barv">37</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:29%;background:#dc2626"></div><span class="barv">29</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>56.00</td>
+<td><span style="color:#16a34a">-1.23%</span></td>
+<td class="muted">624亿</td>
+<td class="muted">87.6</td>
+<td class="muted">14.6%</td>
+<td class="muted">-1.67亿</td>
+<td><a href="reports/锐捷网络301165.html" target="_blank">报告</a></td></tr><tr data-sig="减仓" data-theme="服务器/ODM">
+<td class="rk">38</td>
+<td class="nm"><b>中科曙光</b>🔥<br><span class="pos">国产高性能计算/服务器龙头(海光母系)</span><br><span class="muted">603019.SH · 服务器/ODM</span></td>
+<td class="sig" style="color:#f59e0b;font-weight:700">▼ 减仓</td>
+<td class="ov">42<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:23%;background:#dc2626"></div><span class="barv">23</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:47%;background:#f59e0b"></div><span class="barv">47</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:45%;background:#f59e0b"></div><span class="barv">45</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:60%;background:#f59e0b"></div><span class="barv">60</span></div></td>
+<td>82.15</td>
+<td><span style="color:#dc2626">+0.96%</span></td>
+<td class="muted">1,202亿</td>
+<td class="muted">54.2</td>
+<td class="muted">22.2%</td>
+<td class="muted">-5.32亿</td>
+<td><a href="reports/中科曙光_603019.html" target="_blank">报告</a></td></tr><tr data-sig="减仓" data-theme="算力芯片">
+<td class="rk">39</td>
+<td class="nm"><b>瑞芯微</b><br><span class="pos">AIoT/端侧AI SoC龙头</span><br><span class="muted">603893.SH · 算力芯片</span></td>
+<td class="sig" style="color:#f59e0b;font-weight:700">▼ 减仓</td>
+<td class="ov">41<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:40%;background:#dc2626"></div><span class="barv">40</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:26%;background:#dc2626"></div><span class="barv">26</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:49%;background:#f59e0b"></div><span class="barv">49</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>160.51</td>
+<td><span style="color:#dc2626">+0.27%</span></td>
+<td class="muted">676亿</td>
+<td class="muted">58.3</td>
+<td class="muted">57.1%</td>
+<td class="muted">-3.47亿</td>
+<td><a href="reports/瑞芯微_603893.html" target="_blank">报告</a></td></tr><tr data-sig="减仓" data-theme="通信/运营商">
+<td class="rk">40</td>
+<td class="nm"><b>中国长城</b><br><span class="pos">国产自主可控整机(飞腾PK体系)</span><br><span class="muted">000066.SZ · 通信/运营商</span></td>
+<td class="sig" style="color:#f59e0b;font-weight:700">▼ 减仓</td>
+<td class="ov">41<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:29%;background:#dc2626"></div><span class="barv">29</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:45%;background:#dc2626"></div><span class="barv">45</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:41%;background:#dc2626"></div><span class="barv">41</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>15.51</td>
+<td><span style="color:#16a34a">-1.15%</span></td>
+<td class="muted">500亿</td>
+<td class="muted">2,480.0</td>
+<td class="muted">47.6%</td>
+<td class="muted">-4.61亿</td>
+<td><a href="reports/中国长城_000066.html" target="_blank">报告</a></td></tr><tr data-sig="减仓" data-theme="AI应用/软件">
+<td class="rk">41</td>
+<td class="nm"><b>金山办公</b><br><span class="pos">办公软件龙头WPS，WPS AI</span><br><span class="muted">688111.SH · AI应用/软件</span></td>
+<td class="sig" style="color:#f59e0b;font-weight:700">▼ 减仓</td>
+<td class="ov">40<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:32%;background:#dc2626"></div><span class="barv">32</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:45%;background:#dc2626"></div><span class="barv">45</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:37%;background:#dc2626"></div><span class="barv">37</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>215.00</td>
+<td><span style="color:#dc2626">+2.60%</span></td>
+<td class="muted">998亿</td>
+<td class="muted">27.5</td>
+<td class="muted">445.0%</td>
+<td class="muted">-4.76亿</td>
+<td><a href="reports/金山办公_688111.html" target="_blank">报告</a></td></tr><tr data-sig="减仓" data-theme="液冷/温控">
+<td class="rk">42</td>
+<td class="nm"><b>中恒电气</b><br><span class="pos">数据中心高压直流供电(HVDC)</span><br><span class="muted">002364.SZ · 液冷/温控</span></td>
+<td class="sig" style="color:#f59e0b;font-weight:700">▼ 减仓</td>
+<td class="ov">39<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:23%;background:#dc2626"></div><span class="barv">23</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:21%;background:#dc2626"></div><span class="barv">21</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:64%;background:#f59e0b"></div><span class="barv">64</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>46.51</td>
+<td><span style="color:#16a34a">-5.02%</span></td>
+<td class="muted">262亿</td>
+<td class="muted">200.1</td>
+<td class="muted">22.9%</td>
+<td class="muted">-5.83亿</td>
+<td><span class="muted">—</span></td></tr><tr data-sig="减仓" data-theme="光模块/CPO">
+<td class="rk">43</td>
+<td class="nm"><b>中际旭创</b>🔥<br><span class="pos">全球光模块龙头(800G/1.6T)</span><br><span class="muted">300308.SZ · 光模块/CPO</span></td>
+<td class="sig" style="color:#f59e0b;font-weight:700">▼ 减仓</td>
+<td class="ov">38<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:3%;background:#dc2626"></div><span class="barv">3</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:15%;background:#dc2626"></div><span class="barv">15</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:87%;background:#16a34a"></div><span class="barv">87</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:60%;background:#f59e0b"></div><span class="barv">60</span></div></td>
+<td>1,149.00</td>
+<td><span style="color:#dc2626">+2.22%</span></td>
+<td class="muted">12,814亿</td>
+<td class="muted">85.7</td>
+<td class="muted">262.3%</td>
+<td class="muted">-55.14亿</td>
+<td><a href="reports/中际旭创_300308.html" target="_blank">报告</a></td></tr><tr data-sig="减仓" data-theme="算力芯片">
+<td class="rk">44</td>
+<td class="nm"><b>中芯国际</b>🔥<br><span class="pos">大陆晶圆代工龙头(先进制程)</span><br><span class="muted">688981.SH · 算力芯片</span></td>
+<td class="sig" style="color:#f59e0b;font-weight:700">▼ 减仓</td>
+<td class="ov">38<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:15%;background:#dc2626"></div><span class="barv">15</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:24%;background:#dc2626"></div><span class="barv">24</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:62%;background:#f59e0b"></div><span class="barv">62</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:60%;background:#f59e0b"></div><span class="barv">60</span></div></td>
+<td>124.88</td>
+<td><span style="color:#16a34a">-1.98%</span></td>
+<td class="muted">6,243亿</td>
+<td class="muted">198.3</td>
+<td class="muted">0.4%</td>
+<td class="muted">-8.54亿</td>
+<td><span class="muted">—</span></td></tr><tr data-sig="减仓" data-theme="数据中心/IDC">
+<td class="rk">45</td>
+<td class="nm"><b>数据港</b><br><span class="pos">第三方批发型IDC龙头(阿里供应商)</span><br><span class="muted">603881.SH · 数据中心/IDC</span></td>
+<td class="sig" style="color:#f59e0b;font-weight:700">▼ 减仓</td>
+<td class="ov">38<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:35%;background:#dc2626"></div><span class="barv">35</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:29%;background:#dc2626"></div><span class="barv">29</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:38%;background:#dc2626"></div><span class="barv">38</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>30.85</td>
+<td><span style="color:#16a34a">-1.09%</span></td>
+<td class="muted">222亿</td>
+<td class="muted">158.9</td>
+<td class="muted">1.6%</td>
+<td class="muted">-3.66亿</td>
+<td><a href="reports/数据港603881.html" target="_blank">报告</a></td></tr><tr data-sig="减仓" data-theme="AI应用/软件">
+<td class="rk">46</td>
+<td class="nm"><b>科大讯飞</b><br><span class="pos">智能语音与认知大模型(星火)龙头</span><br><span class="muted">002230.SZ · AI应用/软件</span></td>
+<td class="sig" style="color:#f59e0b;font-weight:700">▼ 减仓</td>
+<td class="ov">37<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:14%;background:#dc2626"></div><span class="barv">14</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:52%;background:#f59e0b"></div><span class="barv">52</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:36%;background:#dc2626"></div><span class="barv">36</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>40.39</td>
+<td><span style="color:#16a34a">-0.98%</span></td>
+<td class="muted">970亿</td>
+<td class="muted">112.4</td>
+<td class="muted">12.2%</td>
+<td class="muted">-11.67亿</td>
+<td><a href="reports/科大讯飞_002230.html" target="_blank">报告</a></td></tr><tr data-sig="减仓" data-theme="数据中心/IDC">
+<td class="rk">47</td>
+<td class="nm"><b>润泽科技</b><br><span class="pos">第三方IDC/智算中心龙头</span><br><span class="muted">300442.SZ · 数据中心/IDC</span></td>
+<td class="sig" style="color:#f59e0b;font-weight:700">▼ 减仓</td>
+<td class="ov">35<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:21%;background:#dc2626"></div><span class="barv">21</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:41%;background:#dc2626"></div><span class="barv">41</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:33%;background:#dc2626"></div><span class="barv">33</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>73.53</td>
+<td><span style="color:#16a34a">-0.66%</span></td>
+<td class="muted">1,207亿</td>
+<td class="muted">23.2</td>
+<td class="muted">35.3%</td>
+<td class="muted">-6.29亿</td>
+<td><a href="reports/润泽科技_300442.html" target="_blank">报告</a></td></tr><tr data-sig="清仓" data-theme="光模块/CPO">
+<td class="rk">48</td>
+<td class="nm"><b>新易盛</b>🔥<br><span class="pos">高速光模块第二梯队龙头</span><br><span class="muted">300502.SZ · 光模块/CPO</span></td>
+<td class="sig" style="color:#dc2626;font-weight:700">✕ 清仓</td>
+<td class="ov">33<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:3%;background:#dc2626"></div><span class="barv">3</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:18%;background:#dc2626"></div><span class="barv">18</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:62%;background:#f59e0b"></div><span class="barv">62</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:60%;background:#f59e0b"></div><span class="barv">60</span></div></td>
+<td>506.46</td>
+<td><span style="color:#16a34a">-3.71%</span></td>
+<td class="muted">7,061亿</td>
+<td class="muted">65.8</td>
+<td class="muted">76.8%</td>
+<td class="muted">-61.75亿</td>
+<td><span class="muted">—</span></td></tr><tr data-sig="清仓" data-theme="半导体设备">
+<td class="rk">49</td>
+<td class="nm"><b>绿的谐波</b><br><span class="pos">谐波减速器龙头(人形机器人核心件)</span><br><span class="muted">688017.SH · 半导体设备</span></td>
+<td class="sig" style="color:#dc2626;font-weight:700">✕ 清仓</td>
+<td class="ov">33<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:10%;background:#dc2626"></div><span class="barv">10</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:6%;background:#dc2626"></div><span class="barv">6</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:71%;background:#16a34a"></div><span class="barv">71</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:53%;background:#f59e0b"></div><span class="barv">53</span></div></td>
+<td>351.00</td>
+<td><span style="color:#16a34a">-4.36%</span></td>
+<td class="muted">643亿</td>
+<td class="muted">470.5</td>
+<td class="muted">61.2%</td>
+<td class="muted">-29.27亿</td>
+<td><a href="reports/绿的谐波_688017.html" target="_blank">报告</a></td></tr><tr data-sig="清仓" data-theme="算力芯片">
+<td class="rk">50</td>
+<td class="nm"><b>寒武纪</b>🔥<br><span class="pos">国产AI芯片(云端训练/推理)第一股</span><br><span class="muted">688256.SH · 算力芯片</span></td>
+<td class="sig" style="color:#dc2626;font-weight:700">✕ 清仓</td>
+<td class="ov">30<br><span class="muted" title="数据完整度">100%</span></td>
+<td><div class="bar"><div class="barfill" style="width:6%;background:#dc2626"></div><span class="barv">6</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:4%;background:#dc2626"></div><span class="barv">4</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:59%;background:#f59e0b"></div><span class="barv">59</span></div></td>
+<td><div class="bar"><div class="barfill" style="width:60%;background:#f59e0b"></div><span class="barv">60</span></div></td>
+<td>1,240.00</td>
+<td><span style="color:#dc2626">+1.68%</span></td>
+<td class="muted">7,791亿</td>
+<td class="muted">286.7</td>
+<td class="muted">185.0%</td>
+<td class="muted">-34.60亿</td>
+<td><a href="reports/寒武纪_688256.html" target="_blank">报告</a></td></tr>
+</tbody></table>
+
+<div class="sect">🌐 海外大厂动态 → A股AI链传导</div>
+<div class="news">
+<div class="news-h"><span class="news-co">英伟达 / 台积电</span>
+<span class="news-imp" style="color:#16a34a">利好</span>
+<span class="muted">2026-06-01</span></div>
+<a class="news-t" href="https://nvidianews.nvidia.com/news/nvidia-and-tsmc-bring-ai-into-fabs-to-advance-semiconductor-design-and-manufacturing" target="_blank">黄仁勋Computex宣布把AI搬进晶圆厂：用CUDA-X+Metropolis做光刻/良率/缺陷检测</a>
+<div class="news-link">→ A股传导：算力链、先进封装、半导体设备情绪偏暖</div>
+<div class="news-tks"><span class="tk">中际旭创</span> <span class="tk">新易盛</span> <span class="tk">北方华创</span> <span class="tk">中芯国际</span></div></div><div class="news">
+<div class="news-h"><span class="news-co">英伟达</span>
+<span class="news-imp" style="color:#16a34a">利好</span>
+<span class="muted">2026-06-01</span></div>
+<a class="news-t" href="https://blogs.nvidia.cn/blog/gtc-2026-news/" target="_blank">面向AI Agent的芯片与参考设计发布；Blackwell全面量产、部署近9GW，Rubin下半年量产(3nm+HBM4，推理5×H100)</a>
+<div class="news-link">→ A股传导：光模块/铜连接/液冷/PCB需求延续，下半年Rubin是新催化</div>
+<div class="news-tks"><span class="tk">中际旭创</span> <span class="tk">新易盛</span> <span class="tk">英维克</span> <span class="tk">沪电(参考)</span></div></div><div class="news">
+<div class="news-h"><span class="news-co">OpenAI</span>
+<span class="news-imp" style="color:#16a34a">利好</span>
+<span class="muted">2026-05-22</span></div>
+<a class="news-t" href="https://www.firecat-web.com/daily-news/8995" target="_blank">锁定英伟达/AMD/博通共约26GW采购；2026算力支出预计480亿美元(占全球27%)</a>
+<div class="news-link">→ A股传导：全球算力capex上修，国产光模块/服务器ODM景气延续</div>
+<div class="news-tks"><span class="tk">中际旭创</span> <span class="tk">新易盛</span> <span class="tk">工业富联(参考)</span> <span class="tk">浪潮信息</span></div></div><div class="news">
+<div class="news-h"><span class="news-co">微软</span>
+<span class="news-imp" style="color:#16a34a">中性偏空(对英伟达) / 利好(对算力总量)</span>
+<span class="muted">2026-05-21</span></div>
+<a class="news-t" href="https://www.firecat-web.com/daily-news/8995" target="_blank">自研推理芯片Maia200发布，单位算力成本较H100降约10%；FY26 capex约1000亿美元(翻倍)</a>
+<div class="news-link">→ A股传导：ASIC自研趋势利好博通链，但抬高云厂自研占比，关注光互联仍受益、GPU链情绪扰动</div>
+<div class="news-tks"><span class="tk">中际旭创</span> <span class="tk">新易盛</span> <span class="tk">海光信息</span> <span class="tk">寒武纪</span></div></div><div class="news">
+<div class="news-h"><span class="news-co">云大厂(谷歌/Meta/微软/亚马逊)</span>
+<span class="news-imp" style="color:#64748b">中性</span>
+<span class="muted">2026-04-26</span></div>
+<a class="news-t" href="https://finance.sina.com.cn/jjxw/2026-04-26/doc-inhvutnp3443299.shtml" target="_blank">多家大厂推进自研芯片以减少对英伟达依赖(ASIC路线)</a>
+<div class="news-link">→ A股传导：利好国产ASIC/算力自主叙事；对纯GPU代理逻辑形成扰动</div>
+<div class="news-tks"><span class="tk">寒武纪</span> <span class="tk">海光信息</span> <span class="tk">中科曙光</span></div></div>
+
+<div class="foot">
+信号灯算法：综合分 = 资金面30% + 估值面(扣非)25% + 技术面25% + 动态情绪20%（缺失维度按权重归一化，综合分列下方%为数据完整度）。<br>
+硬规则：①一次性损益预警 + 资金净流出 → 最多“减仓”；②技术破位 + 资金净流出 → “清仓”。阈值：≥68加仓 / 50–68持有 / 35–50减仓 / &lt;35清仓。<br>
+⚠ 本看板为量化辅助，非投资建议。估值优先扣非口径以避开“伪低估”陷阱。资金面/技术面需 refresh_data.py 刷新当日数据后才完整。<br>
+数据来源：同花顺 iFinD。海外动态：公开新闻（见各条链接）。
+</div></div>
+<script>
+function sortT(n,el){let t=document.getElementById('mt'),rows=[...t.tBodies[0].rows];
+let asc=el.dataset.asc!=='1';el.dataset.asc=asc?'1':'0';
+rows.sort((a,b)=>{let x=a.cells[n].innerText.replace(/[^0-9.\-]/g,''),y=b.cells[n].innerText.replace(/[^0-9.\-]/g,'');
+x=parseFloat(x);y=parseFloat(y);if(isNaN(x))x=-1e9;if(isNaN(y))y=-1e9;return asc?x-y:y-x;});
+rows.forEach(r=>t.tBodies[0].appendChild(r));}
+function filt(sig,btn){document.querySelectorAll('.fbtn').forEach(b=>b.classList.remove('on'));btn.classList.add('on');
+[...document.querySelectorAll('#mt tbody tr')].forEach(r=>{r.style.display=(sig==='all'||r.dataset.sig===sig)?'':'none';});}
+function filtTheme(v){[...document.querySelectorAll('#mt tbody tr')].forEach(r=>{r.style.display=(v==='all'||r.dataset.theme===v)?'':'none';});}
+</script></body></html>
