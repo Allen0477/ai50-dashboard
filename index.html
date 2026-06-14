@@ -82,11 +82,14 @@ a{color:#60a5fa;text-decoration:none}a:hover{text-decoration:underline}
 .sectab th,.sectab td{padding:6px 10px;text-align:center;border-bottom:1px solid #293548;font-size:12px}
 .sectab th{background:#0f172a;color:#94a3b8;font-size:11px}.sectab .nm{text-align:left;font-weight:700}
 .sectab tr:hover td{background:#243044}
+.secrow{cursor:pointer}.secrow .nm{font-weight:700}
+.mlist{text-align:left!important;background:#0f172a;padding:8px 12px!important}
+.mchip{display:inline-block;background:#1e293b;border:1px solid #334155;border-radius:12px;padding:2px 9px;margin:3px 4px 0 0;font-size:11px}
 .spk{vertical-align:middle;margin-top:2px}
 .foot{color:#475569;font-size:11px;margin-top:20px;line-height:1.6}
 </style></head><body><div class="wrap">
 <h1>中国AI 50 · 交易决策看板 <span class="live">● 当日实时</span></h1>
-<div class="sub">数据日期 2026-06-14 · 生成于 2026-06-14 13:15 · 共 50 只 · 信号灯=资金30%/估值(扣非)25%/技术25%/情绪20%</div>
+<div class="sub">数据日期 2026-06-14 · 生成于 2026-06-14 13:20 · 共 50 只 · 信号灯=资金30%/估值(扣非)25%/技术25%/情绪20%</div>
 
 <div class="panels">
   <div class="card"><h3>💰 资金流向榜（主力5日净额·DDE）</h3><div class="fcols"><div class="fcol"><div class="fhead fin">净流入 TOP</div><div class="frow"><span>海光信息</span><span class="fin">+28.14亿</span></div><div class="frow"><span>北方华创</span><span class="fin">+10.06亿</span></div><div class="frow"><span>英维克</span><span class="fin">+6.45亿</span></div><div class="frow"><span>中国电信</span><span class="fin">+2.19亿</span></div><div class="frow"><span>泛微网络</span><span class="fin">+1.63亿</span></div><div class="frow"><span>华勤技术</span><span class="fin">+1.50亿</span></div><div class="frow"><span>盛科通信</span><span class="fin">+1.13亿</span></div><div class="frow"><span>恒立液压</span><span class="fin">+1.01亿</span></div></div><div class="fcol"><div class="fhead fout">净流出 TOP</div><div class="frow"><span>新易盛</span><span class="fout">-61.75亿</span></div><div class="frow"><span>中际旭创</span><span class="fout">-55.14亿</span></div><div class="frow"><span>寒武纪</span><span class="fout">-34.60亿</span></div><div class="frow"><span>绿的谐波</span><span class="fout">-29.27亿</span></div><div class="frow"><span>中兴通讯</span><span class="fout">-29.22亿</span></div><div class="frow"><span>浪潮信息</span><span class="fout">-12.72亿</span></div><div class="frow"><span>紫光股份</span><span class="fout">-11.90亿</span></div><div class="frow"><span>科大讯飞</span><span class="fout">-11.67亿</span></div></div></div></div>
@@ -100,37 +103,47 @@ a{color:#60a5fa;text-decoration:none}a:hover{text-decoration:underline}
 
 <div class="sect">🔄 赛道轮动（钱往哪个细分流）</div>
 <div class="muted" style="margin:-4px 0 8px">按赛道聚合：均涨幅/主力5日净额(红涨绿跌)/均分/加减仓家数，按资金排序。</div>
-<table class="sectab"><thead><tr><th class="nm">赛道</th><th>家数</th><th>均涨幅</th><th>主力5日净额</th><th>均分</th><th>加/减仓</th><th class="nm">影响最大3只(市值加权·当日)</th></tr></thead><tbody><tr><td class="nm">液冷/温控</td><td>4</td>
+<table class="sectab"><thead><tr><th class="nm">赛道</th><th>家数</th><th>均涨幅</th><th>主力5日净额</th><th>均分</th><th>加/减仓</th><th class="nm">影响最大3只(市值加权·当日)</th></tr></thead><tbody><tr class="secrow" onclick="toggleSec(this)"><td class="nm">▸ 液冷/温控</td><td>4</td>
 <td><span style="color:#16a34a">-2.46%</span></td><td><span style="color:#16a34a">-2.0亿</span></td><td>47</td>
 <td><span style="color:#16a34a">0</span> / <span style="color:#f59e0b">3</span></td>
-<td class="nm" style="font-size:11px">麦格米特<span style="color:#16a34a"> -3.0%</span> · 英维克<span style="color:#16a34a"> -1.6%</span> · 中恒电气<span style="color:#16a34a"> -5.0%</span></td></tr><tr><td class="nm">医疗AI</td><td>2</td>
+<td class="nm" style="font-size:11px">麦格米特<span style="color:#16a34a"> -3.0%</span> · 英维克<span style="color:#16a34a"> -1.6%</span> · 中恒电气<span style="color:#16a34a"> -5.0%</span></td></tr>
+<tr class="secdet" style="display:none"><td colspan="7" class="mlist"><span class="mchip">金盘科技<span style="color:#16a34a"> -0.2%</span></span><span class="mchip">英维克<span style="color:#16a34a"> -1.6%</span></span><span class="mchip">麦格米特<span style="color:#16a34a"> -3.0%</span></span><span class="mchip">中恒电气<span style="color:#16a34a"> -5.0%</span></span></td></tr><tr class="secrow" onclick="toggleSec(this)"><td class="nm">▸ 医疗AI</td><td>2</td>
 <td><span style="color:#dc2626">+2.68%</span></td><td><span style="color:#16a34a">-2.2亿</span></td><td>55</td>
 <td><span style="color:#16a34a">0</span> / <span style="color:#f59e0b">1</span></td>
-<td class="nm" style="font-size:11px">卫宁健康<span style="color:#dc2626"> +3.3%</span> · 美年健康<span style="color:#dc2626"> +2.1%</span></td></tr><tr><td class="nm">汽车智能</td><td>4</td>
+<td class="nm" style="font-size:11px">卫宁健康<span style="color:#dc2626"> +3.3%</span> · 美年健康<span style="color:#dc2626"> +2.1%</span></td></tr>
+<tr class="secdet" style="display:none"><td colspan="7" class="mlist"><span class="mchip">卫宁健康<span style="color:#dc2626"> +3.3%</span></span><span class="mchip">美年健康<span style="color:#dc2626"> +2.1%</span></span></td></tr><tr class="secrow" onclick="toggleSec(this)"><td class="nm">▸ 汽车智能</td><td>4</td>
 <td><span style="color:#16a34a">-0.99%</span></td><td><span style="color:#16a34a">-10.9亿</span></td><td>53</td>
 <td><span style="color:#16a34a">0</span> / <span style="color:#f59e0b">2</span></td>
-<td class="nm" style="font-size:11px">恒立液压<span style="color:#16a34a"> -6.5%</span> · 拓普集团<span style="color:#16a34a"> -1.2%</span> · 德赛西威<span style="color:#dc2626"> +1.7%</span></td></tr><tr><td class="nm">数据中心/IDC</td><td>4</td>
+<td class="nm" style="font-size:11px">恒立液压<span style="color:#16a34a"> -6.5%</span> · 拓普集团<span style="color:#16a34a"> -1.2%</span> · 德赛西威<span style="color:#dc2626"> +1.7%</span></td></tr>
+<tr class="secdet" style="display:none"><td colspan="7" class="mlist"><span class="mchip">潍柴重机<span style="color:#dc2626"> +2.1%</span></span><span class="mchip">德赛西威<span style="color:#dc2626"> +1.7%</span></span><span class="mchip">拓普集团<span style="color:#16a34a"> -1.2%</span></span><span class="mchip">恒立液压<span style="color:#16a34a"> -6.5%</span></span></td></tr><tr class="secrow" onclick="toggleSec(this)"><td class="nm">▸ 数据中心/IDC</td><td>4</td>
 <td><span style="color:#16a34a">-0.11%</span></td><td><span style="color:#16a34a">-13.7亿</span></td><td>43</td>
 <td><span style="color:#16a34a">0</span> / <span style="color:#f59e0b">3</span></td>
-<td class="nm" style="font-size:11px">润泽科技<span style="color:#16a34a"> -0.7%</span> · 数据港<span style="color:#16a34a"> -1.1%</span> · 优刻得<span style="color:#dc2626"> +1.2%</span></td></tr><tr><td class="nm">算力芯片</td><td>7</td>
+<td class="nm" style="font-size:11px">润泽科技<span style="color:#16a34a"> -0.7%</span> · 数据港<span style="color:#16a34a"> -1.1%</span> · 优刻得<span style="color:#dc2626"> +1.2%</span></td></tr>
+<tr class="secdet" style="display:none"><td colspan="7" class="mlist"><span class="mchip">优刻得<span style="color:#dc2626"> +1.2%</span></span><span class="mchip">宝信软件<span style="color:#dc2626"> +0.1%</span></span><span class="mchip">润泽科技<span style="color:#16a34a"> -0.7%</span></span><span class="mchip">数据港<span style="color:#16a34a"> -1.1%</span></span></td></tr><tr class="secrow" onclick="toggleSec(this)"><td class="nm">▸ 算力芯片</td><td>7</td>
 <td><span style="color:#16a34a">-1.02%</span></td><td><span style="color:#16a34a">-19.2亿</span></td><td>46</td>
 <td><span style="color:#16a34a">0</span> / <span style="color:#f59e0b">3</span></td>
-<td class="nm" style="font-size:11px">海光信息<span style="color:#16a34a"> -3.4%</span> · 寒武纪<span style="color:#dc2626"> +1.7%</span> · 中芯国际<span style="color:#16a34a"> -2.0%</span></td></tr><tr><td class="nm">半导体设备</td><td>2</td>
+<td class="nm" style="font-size:11px">海光信息<span style="color:#16a34a"> -3.4%</span> · 寒武纪<span style="color:#dc2626"> +1.7%</span> · 中芯国际<span style="color:#16a34a"> -2.0%</span></td></tr>
+<tr class="secdet" style="display:none"><td colspan="7" class="mlist"><span class="mchip">寒武纪<span style="color:#dc2626"> +1.7%</span></span><span class="mchip">恒玄科技<span style="color:#dc2626"> +0.9%</span></span><span class="mchip">瑞芯微<span style="color:#dc2626"> +0.3%</span></span><span class="mchip">乐鑫科技<span style="color:#16a34a"> -0.4%</span></span><span class="mchip">中芯国际<span style="color:#16a34a"> -2.0%</span></span><span class="mchip">海光信息<span style="color:#16a34a"> -3.4%</span></span><span class="mchip">盛科通信<span style="color:#16a34a"> -4.2%</span></span></td></tr><tr class="secrow" onclick="toggleSec(this)"><td class="nm">▸ 半导体设备</td><td>2</td>
 <td><span style="color:#dc2626">+0.15%</span></td><td><span style="color:#16a34a">-19.2亿</span></td><td>52</td>
 <td><span style="color:#16a34a">1</span> / <span style="color:#f59e0b">1</span></td>
-<td class="nm" style="font-size:11px">北方华创<span style="color:#dc2626"> +4.7%</span> · 绿的谐波<span style="color:#16a34a"> -4.4%</span></td></tr><tr><td class="nm">AI应用/软件</td><td>13</td>
+<td class="nm" style="font-size:11px">北方华创<span style="color:#dc2626"> +4.7%</span> · 绿的谐波<span style="color:#16a34a"> -4.4%</span></td></tr>
+<tr class="secdet" style="display:none"><td colspan="7" class="mlist"><span class="mchip">北方华创<span style="color:#dc2626"> +4.7%</span></span><span class="mchip">绿的谐波<span style="color:#16a34a"> -4.4%</span></span></td></tr><tr class="secrow" onclick="toggleSec(this)"><td class="nm">▸ AI应用/软件</td><td>13</td>
 <td><span style="color:#dc2626">+0.78%</span></td><td><span style="color:#16a34a">-25.7亿</span></td><td>53</td>
 <td><span style="color:#16a34a">0</span> / <span style="color:#f59e0b">4</span></td>
-<td class="nm" style="font-size:11px">中国软件<span style="color:#16a34a"> -10.0%</span> · 金山办公<span style="color:#dc2626"> +2.6%</span> · 恒生电子<span style="color:#dc2626"> +3.3%</span></td></tr><tr><td class="nm">服务器/ODM</td><td>6</td>
+<td class="nm" style="font-size:11px">中国软件<span style="color:#16a34a"> -10.0%</span> · 金山办公<span style="color:#dc2626"> +2.6%</span> · 恒生电子<span style="color:#dc2626"> +3.3%</span></td></tr>
+<tr class="secdet" style="display:none"><td colspan="7" class="mlist"><span class="mchip">泛微网络<span style="color:#dc2626"> +4.5%</span></span><span class="mchip">税友股份<span style="color:#dc2626"> +3.7%</span></span><span class="mchip">恒生电子<span style="color:#dc2626"> +3.3%</span></span><span class="mchip">汉得信息<span style="color:#dc2626"> +2.7%</span></span><span class="mchip">金山办公<span style="color:#dc2626"> +2.6%</span></span><span class="mchip">东软集团<span style="color:#dc2626"> +1.4%</span></span><span class="mchip">用友网络<span style="color:#dc2626"> +1.0%</span></span><span class="mchip">博思软件<span style="color:#dc2626"> +0.8%</span></span><span class="mchip">中科创达<span style="color:#dc2626"> +0.7%</span></span><span class="mchip">海天瑞声<span style="color:#dc2626"> +0.6%</span></span><span class="mchip">深信服<span style="color:#16a34a"> -0.1%</span></span><span class="mchip">科大讯飞<span style="color:#16a34a"> -1.0%</span></span><span class="mchip">中国软件<span style="color:#16a34a"> -10.0%</span></span></td></tr><tr class="secrow" onclick="toggleSec(this)"><td class="nm">▸ 服务器/ODM</td><td>6</td>
 <td><span style="color:#16a34a">-0.69%</span></td><td><span style="color:#16a34a">-32.2亿</span></td><td>52</td>
 <td><span style="color:#16a34a">1</span> / <span style="color:#f59e0b">3</span></td>
-<td class="nm" style="font-size:11px">华勤技术<span style="color:#16a34a"> -1.9%</span> · 软通动力<span style="color:#16a34a"> -3.4%</span> · 中科曙光<span style="color:#dc2626"> +1.0%</span></td></tr><tr><td class="nm">通信/运营商</td><td>6</td>
+<td class="nm" style="font-size:11px">华勤技术<span style="color:#16a34a"> -1.9%</span> · 软通动力<span style="color:#16a34a"> -3.4%</span> · 中科曙光<span style="color:#dc2626"> +1.0%</span></td></tr>
+<tr class="secdet" style="display:none"><td colspan="7" class="mlist"><span class="mchip">中科曙光<span style="color:#dc2626"> +1.0%</span></span><span class="mchip">智微智能<span style="color:#dc2626"> +0.7%</span></span><span class="mchip">浪潮信息<span style="color:#dc2626"> +0.0%</span></span><span class="mchip">紫光股份<span style="color:#16a34a"> -0.6%</span></span><span class="mchip">华勤技术<span style="color:#16a34a"> -1.9%</span></span><span class="mchip">软通动力<span style="color:#16a34a"> -3.4%</span></span></td></tr><tr class="secrow" onclick="toggleSec(this)"><td class="nm">▸ 通信/运营商</td><td>6</td>
 <td><span style="color:#16a34a">-1.66%</span></td><td><span style="color:#16a34a">-36.0亿</span></td><td>59</td>
 <td><span style="color:#16a34a">2</span> / <span style="color:#f59e0b">2</span></td>
-<td class="nm" style="font-size:11px">中国电信<span style="color:#16a34a"> -3.0%</span> · 中国移动<span style="color:#16a34a"> -0.9%</span> · 中兴通讯<span style="color:#16a34a"> -3.9%</span></td></tr><tr><td class="nm">光模块/CPO</td><td>2</td>
+<td class="nm" style="font-size:11px">中国电信<span style="color:#16a34a"> -3.0%</span> · 中国移动<span style="color:#16a34a"> -0.9%</span> · 中兴通讯<span style="color:#16a34a"> -3.9%</span></td></tr>
+<tr class="secdet" style="display:none"><td colspan="7" class="mlist"><span class="mchip">中国联通<span style="color:#dc2626"> +0.2%</span></span><span class="mchip">中国移动<span style="color:#16a34a"> -0.9%</span></span><span class="mchip">中国长城<span style="color:#16a34a"> -1.1%</span></span><span class="mchip">锐捷网络<span style="color:#16a34a"> -1.2%</span></span><span class="mchip">中国电信<span style="color:#16a34a"> -3.0%</span></span><span class="mchip">中兴通讯<span style="color:#16a34a"> -3.9%</span></span></td></tr><tr class="secrow" onclick="toggleSec(this)"><td class="nm">▸ 光模块/CPO</td><td>2</td>
 <td><span style="color:#16a34a">-0.75%</span></td><td><span style="color:#16a34a">-116.9亿</span></td><td>36</td>
 <td><span style="color:#16a34a">0</span> / <span style="color:#f59e0b">2</span></td>
-<td class="nm" style="font-size:11px">中际旭创<span style="color:#dc2626"> +2.2%</span> · 新易盛<span style="color:#16a34a"> -3.7%</span></td></tr></tbody></table>
+<td class="nm" style="font-size:11px">中际旭创<span style="color:#dc2626"> +2.2%</span> · 新易盛<span style="color:#16a34a"> -3.7%</span></td></tr>
+<tr class="secdet" style="display:none"><td colspan="7" class="mlist"><span class="mchip">中际旭创<span style="color:#dc2626"> +2.2%</span></span><span class="mchip">新易盛<span style="color:#16a34a"> -3.7%</span></span></td></tr></tbody></table>
 
 <div class="toolbar">
   <span class="muted">筛选信号：</span>
@@ -1577,6 +1590,7 @@ function showOTab(name,btn){document.querySelectorAll('.otab').forEach(b=>b.clas
 ['ov','cal','news'].forEach(v=>{document.getElementById('otab-'+v).style.display=(v===name)?'':'none';});}
 function ofilt(reg,btn){document.querySelectorAll('.ofb').forEach(b=>b.classList.remove('on'));btn.classList.add('on');
 [...document.querySelectorAll('#otab-ov tbody tr')].forEach(r=>{r.style.display=(reg==='all'||r.dataset.reg===reg)?'':'none';});}
+function toggleSec(row){let d=row.nextElementSibling;if(d&&d.classList.contains('secdet')){let open=d.style.display!=='none';d.style.display=open?'none':'';row.cells[0].innerHTML=row.cells[0].innerHTML.replace(open?'▾':'▸',open?'▸':'▾');}}
 function sortG(n,el){let t=el.closest('table'),rows=[...t.tBodies[0].rows];let asc=el.dataset.asc!=='1';el.dataset.asc=asc?'1':'0';
 rows.sort((a,b)=>{let x=parseFloat(a.cells[n].innerText.replace(/[^0-9.\-]/g,'')),y=parseFloat(b.cells[n].innerText.replace(/[^0-9.\-]/g,''));
 if(isNaN(x))x=asc?1e9:-1e9;if(isNaN(y))y=asc?1e9:-1e9;return asc?x-y:y-x;});rows.forEach(r=>t.tBodies[0].appendChild(r));}
