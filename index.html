@@ -89,7 +89,7 @@ a{color:#60a5fa;text-decoration:none}a:hover{text-decoration:underline}
 .foot{color:#475569;font-size:11px;margin-top:20px;line-height:1.6}
 </style></head><body><div class="wrap">
 <h1>中国AI 50 · 交易决策看板 <span class="live">● 当日实时</span></h1>
-<div class="sub">数据日期 2026-06-14 · 生成于 2026-06-14 13:48 · 共 50 只 · 信号灯=资金30%/估值(扣非)25%/技术25%/情绪20%</div>
+<div class="sub">数据日期 2026-06-14 · 生成于 2026-06-14 15:50 · 共 50 只 · 信号灯=资金30%/估值(扣非)25%/技术25%/情绪20%</div>
 
 <div class="panels">
   <div class="card"><h3>💰 资金流向榜（主力5日净额·DDE）</h3><div class="fcols"><div class="fcol"><div class="fhead fin">净流入 TOP</div><div class="frow"><span>海光信息</span><span class="fin">+28.14亿</span></div><div class="frow"><span>北方华创</span><span class="fin">+10.06亿</span></div><div class="frow"><span>英维克</span><span class="fin">+6.45亿</span></div><div class="frow"><span>中国电信</span><span class="fin">+2.19亿</span></div><div class="frow"><span>泛微网络</span><span class="fin">+1.63亿</span></div><div class="frow"><span>华勤技术</span><span class="fin">+1.50亿</span></div><div class="frow"><span>盛科通信</span><span class="fin">+1.13亿</span></div><div class="frow"><span>恒立液压</span><span class="fin">+1.01亿</span></div></div><div class="fcol"><div class="fhead fout">净流出 TOP</div><div class="frow"><span>新易盛</span><span class="fout">-61.75亿</span></div><div class="frow"><span>中际旭创</span><span class="fout">-55.14亿</span></div><div class="frow"><span>寒武纪</span><span class="fout">-34.60亿</span></div><div class="frow"><span>绿的谐波</span><span class="fout">-29.27亿</span></div><div class="frow"><span>中兴通讯</span><span class="fout">-29.22亿</span></div><div class="frow"><span>浪潮信息</span><span class="fout">-12.72亿</span></div><div class="frow"><span>紫光股份</span><span class="fout">-11.90亿</span></div><div class="frow"><span>科大讯飞</span><span class="fout">-11.67亿</span></div></div></div></div>
@@ -1027,410 +1027,510 @@ a{color:#60a5fa;text-decoration:none}a:hover{text-decoration:underline}
 <button class="otab on" onclick="showOTab('ov',this)">🏢 公司总览</button>
 <button class="otab" onclick="showOTab('cal',this)">📅 财报时间轴</button>
 <button class="otab" onclick="showOTab('news',this)">🌐 动态资讯</button></div>
-<div id="otab-ov" class="otab-v"><div class="toolbar"><span class="muted">筛选：</span><button class="ofb on" onclick="ofilt('all',this)">全部</button><button class="ofb" onclick="ofilt('🇺🇸',this)">🇺🇸美</button><button class="ofb" onclick="ofilt('🇹🇼',this)">🇹🇼台</button><button class="ofb" onclick="ofilt('🇯🇵',this)">🇯🇵日</button><button class="ofb" onclick="ofilt('🇰🇷',this)">🇰🇷韩</button><span class="muted">默认按财报临近排序 · 点%表头排序 · 🔥=近期动态命中</span></div>
+<div id="otab-ov" class="otab-v"><div class="toolbar"><span class="muted">筛选：</span><button class="ofb on" onclick="ofilt('all',this)">全部</button><button class="ofb" onclick="ofilt('🇺🇸',this)">🇺🇸美</button><button class="ofb" onclick="ofilt('🇹🇼',this)">🇹🇼台</button><button class="ofb" onclick="ofilt('🇯🇵',this)">🇯🇵日</button><button class="ofb" onclick="ofilt('🇰🇷',this)">🇰🇷韩</button><span class="muted">默认按市值排序 · 点表头(市值/超预期/反应)排序 · 市值统一折美元 · 🔥=近期动态命中</span></div>
 <table class="ovtab"><thead><tr>
-<th>国</th><th class="nm">公司/代码</th><th class="nm">定位</th><th>下次财报</th>
-<th onclick="sortG(4,this)">上次超预期</th><th onclick="sortG(5,this)">财报后1日</th>
-<th onclick="sortG(6,this)">+5日</th><th>动态</th></tr></thead><tbody><tr data-reg="🇺🇸">
-<td>🇺🇸</td>
-<td class="nm"><b>美光</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/MU" target="_blank">MU</a></span></td>
-<td class="muted" style="text-align:left">HBM / 存储</td>
-<td class="month" style="white-space:nowrap">2026-06-24 <span class="muted">10天</span></td>
-<td><span style="color:#dc2626">+33.2%</span></td>
-<td><span style="color:#dc2626">+0.0%</span></td>
-<td><span style="color:#16a34a">-14.3%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇹🇼">
-<td>🇹🇼</td>
-<td class="nm"><b>台积电</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/2330.TW" target="_blank">2330.TW</a></span></td>
-<td class="muted" style="text-align:left">全球晶圆代工 / CoWoS先进封装</td>
-<td class="" style="white-space:nowrap">2026-07-16 <span class="muted">32天</span></td>
-<td><span style="color:#dc2626">+5.3%</span></td>
-<td><span style="color:#dc2626">+1.2%</span></td>
-<td><span style="color:#16a34a">-0.2%</span></td>
-<td>🔥1</td></tr><tr data-reg="🇺🇸">
-<td>🇺🇸</td>
-<td class="nm"><b>特斯拉</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/TSLA" target="_blank">TSLA</a></span></td>
-<td class="muted" style="text-align:left">自动驾驶 / Dojo / 机器人</td>
-<td class="" style="white-space:nowrap">2026-07-22 <span class="muted">38天</span></td>
-<td><span style="color:#16a34a">-36.5%</span></td>
-<td><span style="color:#dc2626">+0.3%</span></td>
-<td><span style="color:#16a34a">-2.7%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
-<td>🇺🇸</td>
-<td class="nm"><b>ServiceNow</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/NOW" target="_blank">NOW</a></span></td>
-<td class="muted" style="text-align:left">企业AI软件</td>
-<td class="" style="white-space:nowrap">2026-07-22 <span class="muted">38天</span></td>
-<td><span style="color:#16a34a">-14.4%</span></td>
-<td><span style="color:#dc2626">+2.9%</span></td>
-<td><span style="color:#16a34a">-9.6%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
-<td>🇺🇸</td>
-<td class="nm"><b>IBM</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/IBM" target="_blank">IBM</a></span></td>
-<td class="muted" style="text-align:left">watsonx企业AI / 量子</td>
-<td class="" style="white-space:nowrap">2026-07-22 <span class="muted">38天</span></td>
-<td><span style="color:#dc2626">+5.5%</span></td>
-<td><span style="color:#16a34a">-1.5%</span></td>
-<td><span style="color:#16a34a">-8.8%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇯🇵">
-<td>🇯🇵</td>
-<td class="nm"><b>瑞萨</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/6723.T" target="_blank">6723.T</a></span></td>
-<td class="muted" style="text-align:left">车规 / 边缘AI MCU</td>
-<td class="" style="white-space:nowrap">2026-07-22 <span class="muted">38天</span></td>
-<td><span style="color:#16a34a">-6.8%</span></td>
-<td><span style="color:#dc2626">+6.7%</span></td>
-<td><span style="color:#dc2626">+3.9%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
-<td>🇺🇸</td>
-<td class="nm"><b>谷歌</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/GOOGL" target="_blank">GOOGL</a></span></td>
-<td class="muted" style="text-align:left">Gemini大模型 / 自研TPU</td>
-<td class="" style="white-space:nowrap">2026-07-23 <span class="muted">39天</span></td>
-<td><span style="color:#dc2626">+94.3%</span></td>
-<td><span style="color:#dc2626">+0.1%</span></td>
-<td><span style="color:#dc2626">+11.1%</span></td>
-<td>🔥1</td></tr><tr data-reg="🇺🇸">
-<td>🇺🇸</td>
-<td class="nm"><b>英特尔</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/INTC" target="_blank">INTC</a></span></td>
-<td class="muted" style="text-align:left">CPU / 代工</td>
-<td class="" style="white-space:nowrap">2026-07-23 <span class="muted">39天</span></td>
-<td><span style="color:#dc2626">+2108.7%</span></td>
-<td><span style="color:#dc2626">+2.3%</span></td>
-<td><span style="color:#dc2626">+45.2%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇯🇵">
-<td>🇯🇵</td>
-<td class="nm"><b>Disco</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/6146.T" target="_blank">6146.T</a></span></td>
-<td class="muted" style="text-align:left">晶圆切割/减薄设备</td>
-<td class="" style="white-space:nowrap">2026-07-23 <span class="muted">39天</span></td>
-<td><span style="color:#dc2626">+17.9%</span></td>
-<td><span style="color:#dc2626">+0.8%</span></td>
-<td><span style="color:#dc2626">+3.0%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇰🇷">
-<td>🇰🇷</td>
-<td class="nm"><b>LG电子</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/066570.KS" target="_blank">066570.KS</a></span></td>
-<td class="muted" style="text-align:left">家电AI / 机器人</td>
-<td class="" style="white-space:nowrap">2026-07-24 <span class="muted">40天</span></td>
-<td><span style="color:#dc2626">+20.5%</span></td>
-<td><span style="color:#dc2626">+10.8%</span></td>
-<td><span style="color:#dc2626">+8.3%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇯🇵">
-<td>🇯🇵</td>
-<td class="nm"><b>爱德万测试</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/6857.T" target="_blank">6857.T</a></span></td>
-<td class="muted" style="text-align:left">芯片测试(HBM/AI测试龙头)</td>
-<td class="" style="white-space:nowrap">2026-07-28 <span class="muted">44天</span></td>
-<td><span style="color:#dc2626">+27.5%</span></td>
-<td><span style="color:#dc2626">+7.0%</span></td>
-<td><span style="color:#dc2626">+0.9%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
-<td>🇺🇸</td>
-<td class="nm"><b>微软</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/MSFT" target="_blank">MSFT</a></span></td>
-<td class="muted" style="text-align:left">AI云Azure / OpenAI最大股东</td>
-<td class="" style="white-space:nowrap">2026-07-29 <span class="muted">45天</span></td>
-<td><span style="color:#dc2626">+5.2%</span></td>
-<td><span style="color:#16a34a">-1.1%</span></td>
-<td><span style="color:#16a34a">-4.2%</span></td>
-<td>🔥2</td></tr><tr data-reg="🇺🇸">
-<td>🇺🇸</td>
-<td class="nm"><b>Meta</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/META" target="_blank">META</a></span></td>
-<td class="muted" style="text-align:left">Llama开源 / AI基建巨额capex</td>
-<td class="" style="white-space:nowrap">2026-07-29 <span class="muted">45天</span></td>
-<td><span style="color:#dc2626">+7.2%</span></td>
-<td><span style="color:#16a34a">-0.3%</span></td>
-<td><span style="color:#16a34a">-9.9%</span></td>
-<td>🔥1</td></tr><tr data-reg="🇺🇸">
-<td>🇺🇸</td>
-<td class="nm"><b>高通</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/QCOM" target="_blank">QCOM</a></span></td>
-<td class="muted" style="text-align:left">端侧AI芯片</td>
-<td class="" style="white-space:nowrap">2026-07-29 <span class="muted">45天</span></td>
-<td><span style="color:#dc2626">+3.6%</span></td>
-<td><span style="color:#dc2626">+4.0%</span></td>
-<td><span style="color:#dc2626">+24.4%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
-<td>🇺🇸</td>
-<td class="nm"><b>Vertiv</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/VRT" target="_blank">VRT</a></span></td>
-<td class="muted" style="text-align:left">数据中心液冷 / 供电</td>
-<td class="" style="white-space:nowrap">2026-07-29 <span class="muted">45天</span></td>
-<td><span style="color:#dc2626">+15.7%</span></td>
-<td><span style="color:#16a34a">-2.3%</span></td>
-<td><span style="color:#16a34a">-2.4%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇹🇼">
-<td>🇹🇼</td>
-<td class="nm"><b>联发科</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/2454.TW" target="_blank">2454.TW</a></span></td>
-<td class="muted" style="text-align:left">AI SoC / 定制ASIC</td>
-<td class="" style="white-space:nowrap">2026-07-29 <span class="muted">45天</span></td>
-<td><span style="color:#dc2626">+5.6%</span></td>
-<td><span style="color:#16a34a">-2.6%</span></td>
-<td><span style="color:#16a34a">-7.6%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇹🇼">
-<td>🇹🇼</td>
-<td class="nm"><b>台达电</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/2308.TW" target="_blank">2308.TW</a></span></td>
-<td class="muted" style="text-align:left">电源 / 散热</td>
-<td class="" style="white-space:nowrap">2026-07-29 <span class="muted">45天</span></td>
-<td><span style="color:#16a34a">-6.1%</span></td>
-<td><span style="color:#dc2626">+1.9%</span></td>
-<td><span style="color:#dc2626">+4.0%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇯🇵">
-<td>🇯🇵</td>
-<td class="nm"><b>基恩士</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/6861.T" target="_blank">6861.T</a></span></td>
-<td class="muted" style="text-align:left">工厂自动化 / 机器视觉</td>
-<td class="" style="white-space:nowrap">2026-07-29 <span class="muted">45天</span></td>
-<td><span style="color:#dc2626">+16.8%</span></td>
-<td><span style="color:#16a34a">-0.5%</span></td>
-<td><span style="color:#dc2626">+20.5%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇰🇷">
-<td>🇰🇷</td>
-<td class="nm"><b>三星电子</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/005930.KS" target="_blank">005930.KS</a></span></td>
-<td class="muted" style="text-align:left">存储/HBM / 代工</td>
-<td class="" style="white-space:nowrap">2026-07-29 <span class="muted">45天</span></td>
-<td><span style="color:#dc2626">+44.5%</span></td>
-<td><span style="color:#dc2626">+1.8%</span></td>
-<td><span style="color:#dc2626">+22.3%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇰🇷">
-<td>🇰🇷</td>
-<td class="nm"><b>SK海力士</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/000660.KS" target="_blank">000660.KS</a></span></td>
-<td class="muted" style="text-align:left">HBM全球龙头</td>
-<td class="" style="white-space:nowrap">2026-07-29 <span class="muted">45天</span></td>
-<td><span style="color:#dc2626">+41.6%</span></td>
-<td><span style="color:#16a34a">-0.1%</span></td>
-<td><span style="color:#dc2626">+6.2%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
-<td>🇺🇸</td>
-<td class="nm"><b>亚马逊</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/AMZN" target="_blank">AMZN</a></span></td>
-<td class="muted" style="text-align:left">AWS云 / 自研Trainium芯片</td>
-<td class="" style="white-space:nowrap">2026-07-30 <span class="muted">46天</span></td>
-<td><span style="color:#dc2626">+69.0%</span></td>
-<td><span style="color:#dc2626">+1.3%</span></td>
-<td><span style="color:#dc2626">+5.3%</span></td>
-<td>🔥1</td></tr><tr data-reg="🇺🇸">
-<td>🇺🇸</td>
-<td class="nm"><b>苹果</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/AAPL" target="_blank">AAPL</a></span></td>
-<td class="muted" style="text-align:left">Apple Intelligence端侧AI</td>
-<td class="" style="white-space:nowrap">2026-07-30 <span class="muted">46天</span></td>
-<td><span style="color:#dc2626">+3.5%</span></td>
-<td><span style="color:#dc2626">+0.4%</span></td>
-<td><span style="color:#dc2626">+6.4%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇹🇼">
-<td>🇹🇼</td>
-<td class="nm"><b>日月光</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/3711.TW" target="_blank">3711.TW</a></span></td>
-<td class="muted" style="text-align:left">封测 / 先进封装</td>
-<td class="" style="white-space:nowrap">2026-07-30 <span class="muted">46天</span></td>
-<td><span style="color:#dc2626">+13.4%</span></td>
-<td><span style="color:#16a34a">-1.4%</span></td>
-<td><span style="color:#dc2626">+5.8%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇯🇵">
-<td>🇯🇵</td>
-<td class="nm"><b>东京电子</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/8035.T" target="_blank">8035.T</a></span></td>
-<td class="muted" style="text-align:left">半导体设备</td>
-<td class="" style="white-space:nowrap">2026-07-30 <span class="muted">46天</span></td>
-<td><span style="color:#dc2626">+14.6%</span></td>
-<td><span style="color:#16a34a">-1.7%</span></td>
-<td><span style="color:#dc2626">+15.3%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇯🇵">
-<td>🇯🇵</td>
-<td class="nm"><b>索尼</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/6758.T" target="_blank">6758.T</a></span></td>
-<td class="muted" style="text-align:left">CMOS图像传感器</td>
-<td class="" style="white-space:nowrap">2026-07-31 <span class="muted">47天</span></td>
-<td><span style="color:#16a34a">-59.4%</span></td>
-<td><span style="color:#dc2626">+0.1%</span></td>
-<td><span style="color:#dc2626">+17.1%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
-<td>🇺🇸</td>
-<td class="nm"><b>Palantir</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/PLTR" target="_blank">PLTR</a></span></td>
-<td class="muted" style="text-align:left">AI数据分析软件</td>
-<td class="" style="white-space:nowrap">2026-08-03 <span class="muted">50天</span></td>
-<td><span style="color:#dc2626">+18.1%</span></td>
-<td><span style="color:#dc2626">+1.4%</span></td>
-<td><span style="color:#16a34a">-4.3%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
-<td>🇺🇸</td>
-<td class="nm"><b>AMD</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/AMD" target="_blank">AMD</a></span></td>
-<td class="muted" style="text-align:left">AI GPU(MI系列) / CPU</td>
-<td class="" style="white-space:nowrap">2026-08-04 <span class="muted">51天</span></td>
-<td><span style="color:#dc2626">+5.8%</span></td>
-<td><span style="color:#dc2626">+4.0%</span></td>
-<td><span style="color:#dc2626">+34.3%</span></td>
-<td>🔥1</td></tr><tr data-reg="🇺🇸">
-<td>🇺🇸</td>
-<td class="nm"><b>Arista</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/ANET" target="_blank">ANET</a></span></td>
-<td class="muted" style="text-align:left">AI数据中心以太网交换</td>
-<td class="" style="white-space:nowrap">2026-08-04 <span class="muted">51天</span></td>
-<td><span style="color:#dc2626">+9.8%</span></td>
-<td><span style="color:#16a34a">-1.4%</span></td>
-<td><span style="color:#16a34a">-21.0%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
-<td>🇺🇸</td>
-<td class="nm"><b>美超微</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/SMCI" target="_blank">SMCI</a></span></td>
-<td class="muted" style="text-align:left">AI服务器</td>
-<td class="" style="white-space:nowrap">2026-08-04 <span class="muted">51天</span></td>
-<td><span style="color:#dc2626">+34.5%</span></td>
-<td><span style="color:#16a34a">-0.3%</span></td>
-<td><span style="color:#dc2626">+20.1%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
-<td>🇺🇸</td>
-<td class="nm"><b>Astera Labs</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/ALAB" target="_blank">ALAB</a></span></td>
-<td class="muted" style="text-align:left">AI互连芯片(PCIe/CXL)</td>
-<td class="" style="white-space:nowrap">2026-08-04 <span class="muted">51天</span></td>
-<td><span style="color:#dc2626">+13.5%</span></td>
-<td><span style="color:#dc2626">+7.2%</span></td>
-<td><span style="color:#dc2626">+3.0%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇰🇷">
-<td>🇰🇷</td>
-<td class="nm"><b>SK电讯</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/017670.KS" target="_blank">017670.KS</a></span></td>
-<td class="muted" style="text-align:left">AI / 电信</td>
-<td class="" style="white-space:nowrap">2026-08-05 <span class="muted">52天</span></td>
-<td><span style="color:#dc2626">+17.6%</span></td>
-<td><span style="color:#16a34a">-1.4%</span></td>
-<td><span style="color:#dc2626">+0.1%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇹🇼">
-<td>🇹🇼</td>
-<td class="nm"><b>智邦</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/2345.TW" target="_blank">2345.TW</a></span></td>
-<td class="muted" style="text-align:left">数据中心交换机</td>
-<td class="" style="white-space:nowrap">2026-08-06 <span class="muted">53天</span></td>
-<td><span style="color:#dc2626">+7.6%</span></td>
-<td><span style="color:#16a34a">-7.2%</span></td>
-<td><span style="color:#dc2626">+4.5%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇯🇵">
-<td>🇯🇵</td>
-<td class="nm"><b>软银集团</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/9984.T" target="_blank">9984.T</a></span></td>
-<td class="muted" style="text-align:left">Arm母公司 / AI投资(星际之门)</td>
-<td class="" style="white-space:nowrap">2026-08-06 <span class="muted">53天</span></td>
-<td><span style="color:#dc2626">+491.3%</span></td>
-<td><span style="color:#dc2626">+4.2%</span></td>
-<td><span style="color:#16a34a">-2.6%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇯🇵">
-<td>🇯🇵</td>
-<td class="nm"><b>Lasertec</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/6920.T" target="_blank">6920.T</a></span></td>
-<td class="muted" style="text-align:left">EUV掩模检测</td>
-<td class="" style="white-space:nowrap">2026-08-06 <span class="muted">53天</span></td>
-<td><span style="color:#16a34a">-29.5%</span></td>
-<td><span style="color:#16a34a">-3.7%</span></td>
-<td><span style="color:#16a34a">-0.5%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇰🇷">
-<td>🇰🇷</td>
-<td class="nm"><b>韩美半导体</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/042700.KS" target="_blank">042700.KS</a></span></td>
-<td class="muted" style="text-align:left">HBM键合设备(TC Bonder)</td>
-<td class="" style="white-space:nowrap">2026-08-06 <span class="muted">53天</span></td>
-<td><span style="color:#16a34a">-78.3%</span></td>
-<td><span style="color:#16a34a">-9.9%</span></td>
-<td><span style="color:#16a34a">-18.8%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇰🇷">
-<td>🇰🇷</td>
-<td class="nm"><b>Kakao</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/035720.KS" target="_blank">035720.KS</a></span></td>
-<td class="muted" style="text-align:left">AI / 平台</td>
-<td class="" style="white-space:nowrap">2026-08-06 <span class="muted">53天</span></td>
-<td><span style="color:#dc2626">+3.0%</span></td>
-<td><span style="color:#16a34a">-4.2%</span></td>
-<td><span style="color:#16a34a">-9.0%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇹🇼">
-<td>🇹🇼</td>
-<td class="nm"><b>纬颖</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/6669.TW" target="_blank">6669.TW</a></span></td>
-<td class="muted" style="text-align:left">云端AI服务器</td>
-<td class="" style="white-space:nowrap">2026-08-07 <span class="muted">54天</span></td>
-<td><span style="color:#dc2626">+14.3%</span></td>
-<td><span style="color:#16a34a">-1.8%</span></td>
-<td><span style="color:#dc2626">+12.3%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇰🇷">
-<td>🇰🇷</td>
-<td class="nm"><b>Naver</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/035420.KS" target="_blank">035420.KS</a></span></td>
-<td class="muted" style="text-align:left">HyperCLOVA大模型</td>
-<td class="" style="white-space:nowrap">2026-08-07 <span class="muted">54天</span></td>
-<td><span style="color:#16a34a">-40.5%</span></td>
-<td><span style="color:#16a34a">-4.5%</span></td>
-<td><span style="color:#16a34a">-6.3%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇹🇼">
-<td>🇹🇼</td>
-<td class="nm"><b>奇鋐</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/3017.TW" target="_blank">3017.TW</a></span></td>
-<td class="muted" style="text-align:left">AI服务器散热(均热板/水冷)</td>
-<td class="" style="white-space:nowrap">2026-08-11 <span class="muted">58天</span></td>
-<td><span style="color:#dc2626">+4.8%</span></td>
-<td><span style="color:#16a34a">-3.9%</span></td>
-<td><span style="color:#16a34a">-2.4%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
-<td>🇺🇸</td>
-<td class="nm"><b>CoreWeave</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/CRWV" target="_blank">CRWV</a></span></td>
-<td class="muted" style="text-align:left">AI算力云(neocloud)</td>
-<td class="" style="white-space:nowrap">2026-08-12 <span class="muted">59天</span></td>
-<td><span style="color:#16a34a">-22.4%</span></td>
-<td><span style="color:#16a34a">-6.6%</span></td>
-<td><span style="color:#16a34a">-19.3%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇹🇼">
-<td>🇹🇼</td>
-<td class="nm"><b>广达</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/2382.TW" target="_blank">2382.TW</a></span></td>
-<td class="muted" style="text-align:left">AI服务器ODM</td>
-<td class="" style="white-space:nowrap">2026-08-12 <span class="muted">59天</span></td>
-<td><span style="color:#dc2626">+8.7%</span></td>
-<td><span style="color:#16a34a">-1.8%</span></td>
-<td><span style="color:#16a34a">-14.8%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇹🇼">
-<td>🇹🇼</td>
-<td class="nm"><b>鸿海</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/2317.TW" target="_blank">2317.TW</a></span></td>
-<td class="muted" style="text-align:left">全球AI服务器代工龙头</td>
-<td class="" style="white-space:nowrap">2026-08-13 <span class="muted">60天</span></td>
-<td><span style="color:#dc2626">+1.5%</span></td>
-<td><span style="color:#dc2626">+0.4%</span></td>
-<td><span style="color:#16a34a">-2.0%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
+<th>#</th><th>国</th><th class="nm">公司/代码</th><th class="srt" onclick="sortG(3,this)">市值</th><th class="nm">定位</th><th>下次财报</th>
+<th class="srt" onclick="sortG(6,this)">上次超预期</th><th class="srt" onclick="sortG(7,this)">财报后1日</th>
+<th class="srt" onclick="sortG(8,this)">+5日</th><th>动态</th></tr></thead><tbody><tr data-reg="🇺🇸">
+<td class="rk">1</td>
 <td>🇺🇸</td>
 <td class="nm"><b>英伟达</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/NVDA" target="_blank">NVDA</a></span></td>
+<td data-v="4969907049133.0"><b>4.97万亿$</b></td>
 <td class="muted" style="text-align:left">AI GPU绝对龙头</td>
 <td class="" style="white-space:nowrap">2026-08-26 <span class="muted">73天</span></td>
 <td><span style="color:#dc2626">+5.5%</span></td>
 <td><span style="color:#dc2626">+1.3%</span></td>
 <td><span style="color:#16a34a">-3.6%</span></td>
 <td>🔥4</td></tr><tr data-reg="🇺🇸">
+<td class="rk">2</td>
 <td>🇺🇸</td>
-<td class="nm"><b>Snowflake</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/SNOW" target="_blank">SNOW</a></span></td>
-<td class="muted" style="text-align:left">数据云 / AI</td>
-<td class="" style="white-space:nowrap">2026-08-26 <span class="muted">73天</span></td>
-<td><span style="color:#16a34a">-3.5%</span></td>
-<td><span style="color:#16a34a">-1.3%</span></td>
-<td><span style="color:#dc2626">+47.0%</span></td>
+<td class="nm"><b>谷歌</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/GOOGL" target="_blank">GOOGL</a></span></td>
+<td data-v="4386274211690.0"><b>4.39万亿$</b></td>
+<td class="muted" style="text-align:left">Gemini大模型 / 自研TPU</td>
+<td class="" style="white-space:nowrap">2026-07-23 <span class="muted">39天</span></td>
+<td><span style="color:#dc2626">+94.3%</span></td>
+<td><span style="color:#dc2626">+0.1%</span></td>
+<td><span style="color:#dc2626">+11.1%</span></td>
+<td>🔥1</td></tr><tr data-reg="🇺🇸">
+<td class="rk">3</td>
+<td>🇺🇸</td>
+<td class="nm"><b>苹果</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/AAPL" target="_blank">AAPL</a></span></td>
+<td data-v="4275930023996.0"><b>4.28万亿$</b></td>
+<td class="muted" style="text-align:left">Apple Intelligence端侧AI</td>
+<td class="" style="white-space:nowrap">2026-07-30 <span class="muted">46天</span></td>
+<td><span style="color:#dc2626">+3.5%</span></td>
+<td><span style="color:#dc2626">+0.4%</span></td>
+<td><span style="color:#dc2626">+6.4%</span></td>
 <td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
+<td class="rk">4</td>
 <td>🇺🇸</td>
-<td class="nm"><b>Marvell</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/MRVL" target="_blank">MRVL</a></span></td>
-<td class="muted" style="text-align:left">定制AI芯片 / 光互联</td>
-<td class="" style="white-space:nowrap">2026-08-27 <span class="muted">74天</span></td>
-<td><span style="color:#dc2626">+0.6%</span></td>
-<td><span style="color:#16a34a">-4.6%</span></td>
-<td><span style="color:#dc2626">+39.6%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
-<td>🇺🇸</td>
-<td class="nm"><b>Credo</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/CRDO" target="_blank">CRDO</a></span></td>
-<td class="muted" style="text-align:left">AI高速连接(有源电缆AEC)</td>
-<td class="" style="white-space:nowrap">2026-09-02 <span class="muted">80天</span></td>
-<td><span style="color:#dc2626">+12.2%</span></td>
+<td class="nm"><b>微软</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/MSFT" target="_blank">MSFT</a></span></td>
+<td data-v="2902586503698.0"><b>2.90万亿$</b></td>
+<td class="muted" style="text-align:left">AI云Azure / OpenAI最大股东</td>
+<td class="" style="white-space:nowrap">2026-07-29 <span class="muted">45天</span></td>
+<td><span style="color:#dc2626">+5.2%</span></td>
+<td><span style="color:#16a34a">-1.1%</span></td>
 <td><span style="color:#16a34a">-4.2%</span></td>
-<td><span style="color:#16a34a">-12.3%</span></td>
-<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
+<td>🔥2</td></tr><tr data-reg="🇺🇸">
+<td class="rk">5</td>
+<td>🇺🇸</td>
+<td class="nm"><b>亚马逊</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/AMZN" target="_blank">AMZN</a></span></td>
+<td data-v="2566108488786.0"><b>2.57万亿$</b></td>
+<td class="muted" style="text-align:left">AWS云 / 自研Trainium芯片</td>
+<td class="" style="white-space:nowrap">2026-07-30 <span class="muted">46天</span></td>
+<td><span style="color:#dc2626">+69.0%</span></td>
+<td><span style="color:#dc2626">+1.3%</span></td>
+<td><span style="color:#dc2626">+5.3%</span></td>
+<td>🔥1</td></tr><tr data-reg="🇹🇼">
+<td class="rk">6</td>
+<td>🇹🇼</td>
+<td class="nm"><b>台积电</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/2330.TW" target="_blank">2330.TW</a></span></td>
+<td data-v="1895089329266.0"><b>1.90万亿$</b></td>
+<td class="muted" style="text-align:left">全球晶圆代工 / CoWoS先进封装</td>
+<td class="" style="white-space:nowrap">2026-07-16 <span class="muted">32天</span></td>
+<td><span style="color:#dc2626">+5.3%</span></td>
+<td><span style="color:#dc2626">+1.2%</span></td>
+<td><span style="color:#16a34a">-0.2%</span></td>
+<td>🔥1</td></tr><tr data-reg="🇺🇸">
+<td class="rk">7</td>
 <td>🇺🇸</td>
 <td class="nm"><b>博通</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/AVGO" target="_blank">AVGO</a></span></td>
+<td data-v="1817728701095.0"><b>1.82万亿$</b></td>
 <td class="muted" style="text-align:left">定制AI ASIC / 网络芯片龙头</td>
 <td class="" style="white-space:nowrap">2026-09-03 <span class="muted">81天</span></td>
 <td><span style="color:#dc2626">+1.8%</span></td>
 <td><span style="color:#16a34a">-0.5%</span></td>
 <td><span style="color:#16a34a">-18.6%</span></td>
 <td>🔥1</td></tr><tr data-reg="🇺🇸">
+<td class="rk">8</td>
+<td>🇺🇸</td>
+<td class="nm"><b>特斯拉</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/TSLA" target="_blank">TSLA</a></span></td>
+<td data-v="1526438825383.0"><b>1.53万亿$</b></td>
+<td class="muted" style="text-align:left">自动驾驶 / Dojo / 机器人</td>
+<td class="" style="white-space:nowrap">2026-07-22 <span class="muted">38天</span></td>
+<td><span style="color:#16a34a">-36.5%</span></td>
+<td><span style="color:#dc2626">+0.3%</span></td>
+<td><span style="color:#16a34a">-2.7%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
+<td class="rk">9</td>
+<td>🇺🇸</td>
+<td class="nm"><b>Meta</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/META" target="_blank">META</a></span></td>
+<td data-v="1439235195323.0"><b>1.44万亿$</b></td>
+<td class="muted" style="text-align:left">Llama开源 / AI基建巨额capex</td>
+<td class="" style="white-space:nowrap">2026-07-29 <span class="muted">45天</span></td>
+<td><span style="color:#dc2626">+7.2%</span></td>
+<td><span style="color:#16a34a">-0.3%</span></td>
+<td><span style="color:#16a34a">-9.9%</span></td>
+<td>🔥1</td></tr><tr data-reg="🇰🇷">
+<td class="rk">10</td>
+<td>🇰🇷</td>
+<td class="nm"><b>三星电子</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/005930.KS" target="_blank">005930.KS</a></span></td>
+<td data-v="1395171310996.0"><b>1.40万亿$</b></td>
+<td class="muted" style="text-align:left">存储/HBM / 代工</td>
+<td class="" style="white-space:nowrap">2026-07-29 <span class="muted">45天</span></td>
+<td><span style="color:#dc2626">+44.5%</span></td>
+<td><span style="color:#dc2626">+1.8%</span></td>
+<td><span style="color:#dc2626">+22.3%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
+<td class="rk">11</td>
+<td>🇺🇸</td>
+<td class="nm"><b>美光</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/MU" target="_blank">MU</a></span></td>
+<td data-v="1106995005283.0"><b>1.11万亿$</b></td>
+<td class="muted" style="text-align:left">HBM / 存储</td>
+<td class="month" style="white-space:nowrap">2026-06-24 <span class="muted">10天</span></td>
+<td><span style="color:#dc2626">+33.2%</span></td>
+<td><span style="color:#dc2626">+0.0%</span></td>
+<td><span style="color:#16a34a">-14.3%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇰🇷">
+<td class="rk">12</td>
+<td>🇰🇷</td>
+<td class="nm"><b>SK海力士</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/000660.KS" target="_blank">000660.KS</a></span></td>
+<td data-v="1005466799914.0"><b>1.01万亿$</b></td>
+<td class="muted" style="text-align:left">HBM全球龙头</td>
+<td class="" style="white-space:nowrap">2026-07-29 <span class="muted">45天</span></td>
+<td><span style="color:#dc2626">+41.6%</span></td>
+<td><span style="color:#16a34a">-0.1%</span></td>
+<td><span style="color:#dc2626">+6.2%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
+<td class="rk">13</td>
+<td>🇺🇸</td>
+<td class="nm"><b>AMD</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/AMD" target="_blank">AMD</a></span></td>
+<td data-v="834166380836.0"><b>8,342亿$</b></td>
+<td class="muted" style="text-align:left">AI GPU(MI系列) / CPU</td>
+<td class="" style="white-space:nowrap">2026-08-04 <span class="muted">51天</span></td>
+<td><span style="color:#dc2626">+5.8%</span></td>
+<td><span style="color:#dc2626">+4.0%</span></td>
+<td><span style="color:#dc2626">+34.3%</span></td>
+<td>🔥1</td></tr><tr data-reg="🇺🇸">
+<td class="rk">14</td>
+<td>🇺🇸</td>
+<td class="nm"><b>英特尔</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/INTC" target="_blank">INTC</a></span></td>
+<td data-v="626088818466.0"><b>6,261亿$</b></td>
+<td class="muted" style="text-align:left">CPU / 代工</td>
+<td class="" style="white-space:nowrap">2026-07-23 <span class="muted">39天</span></td>
+<td><span style="color:#dc2626">+2108.7%</span></td>
+<td><span style="color:#dc2626">+2.3%</span></td>
+<td><span style="color:#dc2626">+45.2%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
+<td class="rk">15</td>
+<td>🇺🇸</td>
+<td class="nm"><b>甲骨文</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/ORCL" target="_blank">ORCL</a></span></td>
+<td data-v="529566364023.0"><b>5,296亿$</b></td>
+<td class="muted" style="text-align:left">AI云OCI高增长</td>
+<td class="" style="white-space:nowrap">2026-09-09 <span class="muted">87天</span></td>
+<td><span style="color:#dc2626">+7.5%</span></td>
+<td><span style="color:#16a34a">-2.2%</span></td>
+<td><span class="muted">—</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
+<td class="rk">16</td>
+<td>🇺🇸</td>
+<td class="nm"><b>Palantir</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/PLTR" target="_blank">PLTR</a></span></td>
+<td data-v="306831954815.0"><b>3,068亿$</b></td>
+<td class="muted" style="text-align:left">AI数据分析软件</td>
+<td class="" style="white-space:nowrap">2026-08-03 <span class="muted">50天</span></td>
+<td><span style="color:#dc2626">+18.1%</span></td>
+<td><span style="color:#dc2626">+1.4%</span></td>
+<td><span style="color:#16a34a">-4.3%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
+<td class="rk">17</td>
 <td>🇺🇸</td>
 <td class="nm"><b>戴尔</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/DELL" target="_blank">DELL</a></span></td>
+<td data-v="256372082747.0"><b>2,564亿$</b></td>
 <td class="muted" style="text-align:left">AI服务器</td>
 <td class="" style="white-space:nowrap">2026-09-03 <span class="muted">81天</span></td>
 <td><span style="color:#dc2626">+64.0%</span></td>
 <td><span style="color:#dc2626">+3.8%</span></td>
 <td><span style="color:#dc2626">+37.9%</span></td>
 <td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
+<td class="rk">18</td>
 <td>🇺🇸</td>
-<td class="nm"><b>甲骨文</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/ORCL" target="_blank">ORCL</a></span></td>
-<td class="muted" style="text-align:left">AI云OCI高增长</td>
-<td class="" style="white-space:nowrap">2026-09-09 <span class="muted">87天</span></td>
-<td><span style="color:#dc2626">+7.5%</span></td>
-<td><span style="color:#16a34a">-2.2%</span></td>
-<td><span class="muted">—</span></td>
+<td class="nm"><b>IBM</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/IBM" target="_blank">IBM</a></span></td>
+<td data-v="255874359449.0"><b>2,559亿$</b></td>
+<td class="muted" style="text-align:left">watsonx企业AI / 量子</td>
+<td class="" style="white-space:nowrap">2026-07-22 <span class="muted">38天</span></td>
+<td><span style="color:#dc2626">+5.5%</span></td>
+<td><span style="color:#16a34a">-1.5%</span></td>
+<td><span style="color:#16a34a">-8.8%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
+<td class="rk">19</td>
+<td>🇺🇸</td>
+<td class="nm"><b>Marvell</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/MRVL" target="_blank">MRVL</a></span></td>
+<td data-v="244892233176.0"><b>2,449亿$</b></td>
+<td class="muted" style="text-align:left">定制AI芯片 / 光互联</td>
+<td class="" style="white-space:nowrap">2026-08-27 <span class="muted">74天</span></td>
+<td><span style="color:#dc2626">+0.6%</span></td>
+<td><span style="color:#16a34a">-4.6%</span></td>
+<td><span style="color:#dc2626">+39.6%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇯🇵">
+<td class="rk">20</td>
+<td>🇯🇵</td>
+<td class="nm"><b>软银集团</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/9984.T" target="_blank">9984.T</a></span></td>
+<td data-v="230255234604.0"><b>2,303亿$</b></td>
+<td class="muted" style="text-align:left">Arm母公司 / AI投资(星际之门)</td>
+<td class="" style="white-space:nowrap">2026-08-06 <span class="muted">53天</span></td>
+<td><span style="color:#dc2626">+491.3%</span></td>
+<td><span style="color:#dc2626">+4.2%</span></td>
+<td><span style="color:#16a34a">-2.6%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
+<td class="rk">21</td>
+<td>🇺🇸</td>
+<td class="nm"><b>高通</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/QCOM" target="_blank">QCOM</a></span></td>
+<td data-v="223152881287.0"><b>2,232亿$</b></td>
+<td class="muted" style="text-align:left">端侧AI芯片</td>
+<td class="" style="white-space:nowrap">2026-07-29 <span class="muted">45天</span></td>
+<td><span style="color:#dc2626">+3.6%</span></td>
+<td><span style="color:#dc2626">+4.0%</span></td>
+<td><span style="color:#dc2626">+24.4%</span></td>
 <td><span class="muted">—</span></td></tr><tr data-reg="🇹🇼">
+<td class="rk">22</td>
+<td>🇹🇼</td>
+<td class="nm"><b>联发科</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/2454.TW" target="_blank">2454.TW</a></span></td>
+<td data-v="211064236889.0"><b>2,111亿$</b></td>
+<td class="muted" style="text-align:left">AI SoC / 定制ASIC</td>
+<td class="" style="white-space:nowrap">2026-07-29 <span class="muted">45天</span></td>
+<td><span style="color:#dc2626">+5.6%</span></td>
+<td><span style="color:#16a34a">-2.6%</span></td>
+<td><span style="color:#16a34a">-7.6%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
+<td class="rk">23</td>
+<td>🇺🇸</td>
+<td class="nm"><b>Arista</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/ANET" target="_blank">ANET</a></span></td>
+<td data-v="205546825976.0"><b>2,055亿$</b></td>
+<td class="muted" style="text-align:left">AI数据中心以太网交换</td>
+<td class="" style="white-space:nowrap">2026-08-04 <span class="muted">51天</span></td>
+<td><span style="color:#dc2626">+9.8%</span></td>
+<td><span style="color:#16a34a">-1.4%</span></td>
+<td><span style="color:#16a34a">-21.0%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇯🇵">
+<td class="rk">24</td>
+<td>🇯🇵</td>
+<td class="nm"><b>东京电子</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/8035.T" target="_blank">8035.T</a></span></td>
+<td data-v="193090115800.0"><b>1,931亿$</b></td>
+<td class="muted" style="text-align:left">半导体设备</td>
+<td class="" style="white-space:nowrap">2026-07-30 <span class="muted">46天</span></td>
+<td><span style="color:#dc2626">+14.6%</span></td>
+<td><span style="color:#16a34a">-1.7%</span></td>
+<td><span style="color:#dc2626">+15.3%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇹🇼">
+<td class="rk">25</td>
+<td>🇹🇼</td>
+<td class="nm"><b>台达电</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/2308.TW" target="_blank">2308.TW</a></span></td>
+<td data-v="182017031403.0"><b>1,820亿$</b></td>
+<td class="muted" style="text-align:left">电源 / 散热</td>
+<td class="" style="white-space:nowrap">2026-07-29 <span class="muted">45天</span></td>
+<td><span style="color:#16a34a">-6.1%</span></td>
+<td><span style="color:#dc2626">+1.9%</span></td>
+<td><span style="color:#dc2626">+4.0%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇯🇵">
+<td class="rk">26</td>
+<td>🇯🇵</td>
+<td class="nm"><b>爱德万测试</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/6857.T" target="_blank">6857.T</a></span></td>
+<td data-v="123739269321.0"><b>1,237亿$</b></td>
+<td class="muted" style="text-align:left">芯片测试(HBM/AI测试龙头)</td>
+<td class="" style="white-space:nowrap">2026-07-28 <span class="muted">44天</span></td>
+<td><span style="color:#dc2626">+27.5%</span></td>
+<td><span style="color:#dc2626">+7.0%</span></td>
+<td><span style="color:#dc2626">+0.9%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇯🇵">
+<td class="rk">27</td>
+<td>🇯🇵</td>
+<td class="nm"><b>索尼</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/6758.T" target="_blank">6758.T</a></span></td>
+<td data-v="121044049014.0"><b>1,210亿$</b></td>
+<td class="muted" style="text-align:left">CMOS图像传感器</td>
+<td class="" style="white-space:nowrap">2026-07-31 <span class="muted">47天</span></td>
+<td><span style="color:#16a34a">-59.4%</span></td>
+<td><span style="color:#dc2626">+0.1%</span></td>
+<td><span style="color:#dc2626">+17.1%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
+<td class="rk">28</td>
+<td>🇺🇸</td>
+<td class="nm"><b>Vertiv</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/VRT" target="_blank">VRT</a></span></td>
+<td data-v="116335035226.0"><b>1,163亿$</b></td>
+<td class="muted" style="text-align:left">数据中心液冷 / 供电</td>
+<td class="" style="white-space:nowrap">2026-07-29 <span class="muted">45天</span></td>
+<td><span style="color:#dc2626">+15.7%</span></td>
+<td><span style="color:#16a34a">-2.3%</span></td>
+<td><span style="color:#16a34a">-2.4%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇹🇼">
+<td class="rk">29</td>
+<td>🇹🇼</td>
+<td class="nm"><b>鸿海</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/2317.TW" target="_blank">2317.TW</a></span></td>
+<td data-v="115390701337.0"><b>1,154亿$</b></td>
+<td class="muted" style="text-align:left">全球AI服务器代工龙头</td>
+<td class="" style="white-space:nowrap">2026-08-13 <span class="muted">60天</span></td>
+<td><span style="color:#dc2626">+1.5%</span></td>
+<td><span style="color:#dc2626">+0.4%</span></td>
+<td><span style="color:#16a34a">-2.0%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇯🇵">
+<td class="rk">30</td>
+<td>🇯🇵</td>
+<td class="nm"><b>基恩士</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/6861.T" target="_blank">6861.T</a></span></td>
+<td data-v="109948969284.0"><b>1,099亿$</b></td>
+<td class="muted" style="text-align:left">工厂自动化 / 机器视觉</td>
+<td class="" style="white-space:nowrap">2026-07-29 <span class="muted">45天</span></td>
+<td><span style="color:#dc2626">+16.8%</span></td>
+<td><span style="color:#16a34a">-0.5%</span></td>
+<td><span style="color:#dc2626">+20.5%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
+<td class="rk">31</td>
+<td>🇺🇸</td>
+<td class="nm"><b>ServiceNow</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/NOW" target="_blank">NOW</a></span></td>
+<td data-v="105348113774.0"><b>1,053亿$</b></td>
+<td class="muted" style="text-align:left">企业AI软件</td>
+<td class="" style="white-space:nowrap">2026-07-22 <span class="muted">38天</span></td>
+<td><span style="color:#16a34a">-14.4%</span></td>
+<td><span style="color:#dc2626">+2.9%</span></td>
+<td><span style="color:#16a34a">-9.6%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇹🇼">
+<td class="rk">32</td>
+<td>🇹🇼</td>
+<td class="nm"><b>日月光</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/3711.TW" target="_blank">3711.TW</a></span></td>
+<td data-v="81899904475.0"><b>819亿$</b></td>
+<td class="muted" style="text-align:left">封测 / 先进封装</td>
+<td class="" style="white-space:nowrap">2026-07-30 <span class="muted">46天</span></td>
+<td><span style="color:#dc2626">+13.4%</span></td>
+<td><span style="color:#16a34a">-1.4%</span></td>
+<td><span style="color:#dc2626">+5.8%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
+<td class="rk">33</td>
+<td>🇺🇸</td>
+<td class="nm"><b>Snowflake</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/SNOW" target="_blank">SNOW</a></span></td>
+<td data-v="80681547577.0"><b>807亿$</b></td>
+<td class="muted" style="text-align:left">数据云 / AI</td>
+<td class="" style="white-space:nowrap">2026-08-26 <span class="muted">73天</span></td>
+<td><span style="color:#16a34a">-3.5%</span></td>
+<td><span style="color:#16a34a">-1.3%</span></td>
+<td><span style="color:#dc2626">+47.0%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
+<td class="rk">34</td>
+<td>🇺🇸</td>
+<td class="nm"><b>Astera Labs</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/ALAB" target="_blank">ALAB</a></span></td>
+<td data-v="62932423758.0"><b>629亿$</b></td>
+<td class="muted" style="text-align:left">AI互连芯片(PCIe/CXL)</td>
+<td class="" style="white-space:nowrap">2026-08-04 <span class="muted">51天</span></td>
+<td><span style="color:#dc2626">+13.5%</span></td>
+<td><span style="color:#dc2626">+7.2%</span></td>
+<td><span style="color:#dc2626">+3.0%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
+<td class="rk">35</td>
+<td>🇺🇸</td>
+<td class="nm"><b>CoreWeave</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/CRWV" target="_blank">CRWV</a></span></td>
+<td data-v="54857099955.0"><b>549亿$</b></td>
+<td class="muted" style="text-align:left">AI算力云(neocloud)</td>
+<td class="" style="white-space:nowrap">2026-08-12 <span class="muted">59天</span></td>
+<td><span style="color:#16a34a">-22.4%</span></td>
+<td><span style="color:#16a34a">-6.6%</span></td>
+<td><span style="color:#16a34a">-19.3%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇯🇵">
+<td class="rk">36</td>
+<td>🇯🇵</td>
+<td class="nm"><b>Disco</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/6146.T" target="_blank">6146.T</a></span></td>
+<td data-v="54100670659.0"><b>541亿$</b></td>
+<td class="muted" style="text-align:left">晶圆切割/减薄设备</td>
+<td class="" style="white-space:nowrap">2026-07-23 <span class="muted">39天</span></td>
+<td><span style="color:#dc2626">+17.9%</span></td>
+<td><span style="color:#dc2626">+0.8%</span></td>
+<td><span style="color:#dc2626">+3.0%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇯🇵">
+<td class="rk">37</td>
+<td>🇯🇵</td>
+<td class="nm"><b>瑞萨</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/6723.T" target="_blank">6723.T</a></span></td>
+<td data-v="49325802530.0"><b>493亿$</b></td>
+<td class="muted" style="text-align:left">车规 / 边缘AI MCU</td>
+<td class="" style="white-space:nowrap">2026-07-22 <span class="muted">38天</span></td>
+<td><span style="color:#16a34a">-6.8%</span></td>
+<td><span style="color:#dc2626">+6.7%</span></td>
+<td><span style="color:#dc2626">+3.9%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
+<td class="rk">38</td>
+<td>🇺🇸</td>
+<td class="nm"><b>Credo</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/CRDO" target="_blank">CRDO</a></span></td>
+<td data-v="46261889001.0"><b>463亿$</b></td>
+<td class="muted" style="text-align:left">AI高速连接(有源电缆AEC)</td>
+<td class="" style="white-space:nowrap">2026-09-02 <span class="muted">80天</span></td>
+<td><span style="color:#dc2626">+12.2%</span></td>
+<td><span style="color:#16a34a">-4.2%</span></td>
+<td><span style="color:#16a34a">-12.3%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇹🇼">
+<td class="rk">39</td>
+<td>🇹🇼</td>
+<td class="nm"><b>广达</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/2382.TW" target="_blank">2382.TW</a></span></td>
+<td data-v="45361620282.0"><b>454亿$</b></td>
+<td class="muted" style="text-align:left">AI服务器ODM</td>
+<td class="" style="white-space:nowrap">2026-08-12 <span class="muted">59天</span></td>
+<td><span style="color:#dc2626">+8.7%</span></td>
+<td><span style="color:#16a34a">-1.8%</span></td>
+<td><span style="color:#16a34a">-14.8%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇹🇼">
+<td class="rk">40</td>
+<td>🇹🇼</td>
+<td class="nm"><b>智邦</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/2345.TW" target="_blank">2345.TW</a></span></td>
+<td data-v="41285990345.0"><b>413亿$</b></td>
+<td class="muted" style="text-align:left">数据中心交换机</td>
+<td class="" style="white-space:nowrap">2026-08-06 <span class="muted">53天</span></td>
+<td><span style="color:#dc2626">+7.6%</span></td>
+<td><span style="color:#16a34a">-7.2%</span></td>
+<td><span style="color:#dc2626">+4.5%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇹🇼">
+<td class="rk">41</td>
+<td>🇹🇼</td>
+<td class="nm"><b>奇鋐</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/3017.TW" target="_blank">3017.TW</a></span></td>
+<td data-v="29866052313.0"><b>299亿$</b></td>
+<td class="muted" style="text-align:left">AI服务器散热(均热板/水冷)</td>
+<td class="" style="white-space:nowrap">2026-08-11 <span class="muted">58天</span></td>
+<td><span style="color:#dc2626">+4.8%</span></td>
+<td><span style="color:#16a34a">-3.9%</span></td>
+<td><span style="color:#16a34a">-2.4%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇹🇼">
+<td class="rk">42</td>
+<td>🇹🇼</td>
+<td class="nm"><b>纬颖</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/6669.TW" target="_blank">6669.TW</a></span></td>
+<td data-v="28514008825.0"><b>285亿$</b></td>
+<td class="muted" style="text-align:left">云端AI服务器</td>
+<td class="" style="white-space:nowrap">2026-08-07 <span class="muted">54天</span></td>
+<td><span style="color:#dc2626">+14.3%</span></td>
+<td><span style="color:#16a34a">-1.8%</span></td>
+<td><span style="color:#dc2626">+12.3%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇰🇷">
+<td class="rk">43</td>
+<td>🇰🇷</td>
+<td class="nm"><b>LG电子</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/066570.KS" target="_blank">066570.KS</a></span></td>
+<td data-v="26681526868.0"><b>267亿$</b></td>
+<td class="muted" style="text-align:left">家电AI / 机器人</td>
+<td class="" style="white-space:nowrap">2026-07-24 <span class="muted">40天</span></td>
+<td><span style="color:#dc2626">+20.5%</span></td>
+<td><span style="color:#dc2626">+10.8%</span></td>
+<td><span style="color:#dc2626">+8.3%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇯🇵">
+<td class="rk">44</td>
+<td>🇯🇵</td>
+<td class="nm"><b>Lasertec</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/6920.T" target="_blank">6920.T</a></span></td>
+<td data-v="24619968612.0"><b>246亿$</b></td>
+<td class="muted" style="text-align:left">EUV掩模检测</td>
+<td class="" style="white-space:nowrap">2026-08-06 <span class="muted">53天</span></td>
+<td><span style="color:#16a34a">-29.5%</span></td>
+<td><span style="color:#16a34a">-3.7%</span></td>
+<td><span style="color:#16a34a">-0.5%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇰🇷">
+<td class="rk">45</td>
+<td>🇰🇷</td>
+<td class="nm"><b>Naver</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/035420.KS" target="_blank">035420.KS</a></span></td>
+<td data-v="24340501988.0"><b>243亿$</b></td>
+<td class="muted" style="text-align:left">HyperCLOVA大模型</td>
+<td class="" style="white-space:nowrap">2026-08-07 <span class="muted">54天</span></td>
+<td><span style="color:#16a34a">-40.5%</span></td>
+<td><span style="color:#16a34a">-4.5%</span></td>
+<td><span style="color:#16a34a">-6.3%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇰🇷">
+<td class="rk">46</td>
+<td>🇰🇷</td>
+<td class="nm"><b>韩美半导体</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/042700.KS" target="_blank">042700.KS</a></span></td>
+<td data-v="22558903077.0"><b>226亿$</b></td>
+<td class="muted" style="text-align:left">HBM键合设备(TC Bonder)</td>
+<td class="" style="white-space:nowrap">2026-08-06 <span class="muted">53天</span></td>
+<td><span style="color:#16a34a">-78.3%</span></td>
+<td><span style="color:#16a34a">-9.9%</span></td>
+<td><span style="color:#16a34a">-18.8%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇺🇸">
+<td class="rk">47</td>
+<td>🇺🇸</td>
+<td class="nm"><b>美超微</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/SMCI" target="_blank">SMCI</a></span></td>
+<td data-v="18319206411.0"><b>183亿$</b></td>
+<td class="muted" style="text-align:left">AI服务器</td>
+<td class="" style="white-space:nowrap">2026-08-04 <span class="muted">51天</span></td>
+<td><span style="color:#dc2626">+34.5%</span></td>
+<td><span style="color:#16a34a">-0.3%</span></td>
+<td><span style="color:#dc2626">+20.1%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇹🇼">
+<td class="rk">48</td>
 <td>🇹🇼</td>
 <td class="nm"><b>纬创</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/3231.TW" target="_blank">3231.TW</a></span></td>
+<td data-v="15695800773.0"><b>157亿$</b></td>
 <td class="muted" style="text-align:left">AI服务器</td>
 <td class="" style="white-space:nowrap"><span class="muted">—</span></td>
 <td><span style="color:#dc2626">+0.6%</span></td>
 <td><span style="color:#dc2626">+0.3%</span></td>
 <td><span style="color:#16a34a">-5.5%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇰🇷">
+<td class="rk">49</td>
+<td>🇰🇷</td>
+<td class="nm"><b>SK电讯</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/017670.KS" target="_blank">017670.KS</a></span></td>
+<td data-v="14457546081.0"><b>145亿$</b></td>
+<td class="muted" style="text-align:left">AI / 电信</td>
+<td class="" style="white-space:nowrap">2026-08-05 <span class="muted">52天</span></td>
+<td><span style="color:#dc2626">+17.6%</span></td>
+<td><span style="color:#16a34a">-1.4%</span></td>
+<td><span style="color:#dc2626">+0.1%</span></td>
+<td><span class="muted">—</span></td></tr><tr data-reg="🇰🇷">
+<td class="rk">50</td>
+<td>🇰🇷</td>
+<td class="nm"><b>Kakao</b> <span class="gco-tk"><a href="https://finance.yahoo.com/quote/035720.KS" target="_blank">035720.KS</a></span></td>
+<td data-v="12048554607.0"><b>120亿$</b></td>
+<td class="muted" style="text-align:left">AI / 平台</td>
+<td class="" style="white-space:nowrap">2026-08-06 <span class="muted">53天</span></td>
+<td><span style="color:#dc2626">+3.0%</span></td>
+<td><span style="color:#16a34a">-4.2%</span></td>
+<td><span style="color:#16a34a">-9.0%</span></td>
 <td><span class="muted">—</span></td></tr></tbody></table></div>
 <div id="otab-cal" class="otab-v" style="display:none">
 <div class="muted" style="margin-bottom:8px">🔴≤7天临近(波动放大) · 🟡≤30天</div><div class="ecal-grid"><div class="ecal month">
@@ -1585,6 +1685,7 @@ function ofilt(reg,btn){document.querySelectorAll('.ofb').forEach(b=>b.classList
 [...document.querySelectorAll('#otab-ov tbody tr')].forEach(r=>{r.style.display=(reg==='all'||r.dataset.reg===reg)?'':'none';});}
 function toggleSec(row){let d=row.nextElementSibling;if(d&&d.classList.contains('secdet')){let open=d.style.display!=='none';d.style.display=open?'none':'';row.cells[0].innerHTML=row.cells[0].innerHTML.replace(open?'▾':'▸',open?'▸':'▾');}}
 function sortG(n,el){let t=el.closest('table'),rows=[...t.tBodies[0].rows];let asc=el.dataset.asc!=='1';el.dataset.asc=asc?'1':'0';
-rows.sort((a,b)=>{let x=parseFloat(a.cells[n].innerText.replace(/[^0-9.\-]/g,'')),y=parseFloat(b.cells[n].innerText.replace(/[^0-9.\-]/g,''));
-if(isNaN(x))x=asc?1e9:-1e9;if(isNaN(y))y=asc?1e9:-1e9;return asc?x-y:y-x;});rows.forEach(r=>t.tBodies[0].appendChild(r));}
+function val(c){if(c.dataset&&c.dataset.v!==undefined&&c.dataset.v!=='')return parseFloat(c.dataset.v);return parseFloat(c.innerText.replace(/[^0-9.\-]/g,''));}
+rows.sort((a,b)=>{let x=val(a.cells[n]),y=val(b.cells[n]);
+if(isNaN(x))x=asc?1e18:-1e18;if(isNaN(y))y=asc?1e18:-1e18;return asc?x-y:y-x;});rows.forEach(r=>t.tBodies[0].appendChild(r));}
 </script></body></html>
